@@ -4639,13 +4639,14 @@ ${getFullCSS()}
 }
 
 
-/* ============ 03-FIXES-URGENTS.CSS ============ */
+/* ============ THEME-OVERRIDES.CSS ============ */
 /* ====================================
-   03-FIXES-URGENTS.CSS
-   Fixes crítics per arreglar problemes visuals
+   THEME-OVERRIDES.CSS
+   Global theme overrides and defaults
+   Professional system-wide style consistency
    ==================================== */
 
-/* 1. FONS BLANC PER DEFECTE */
+/* 1. GLOBAL DEFAULTS - White background system-wide */
 html {
   background-color: #ffffff !important;
 }
@@ -4655,7 +4656,7 @@ body {
   min-height: 100vh;
 }
 
-/* 2. COLORS DEL MENÚ DESPLEGABLE */
+/* 2. NAVIGATION SYSTEM */
 .dropdown-menu {
   background-color: #ffffff !important;
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
@@ -4663,7 +4664,7 @@ body {
 }
 
 .dropdown-menu a {
-  color: #1f2937 !important; /* Text fosc sobre fons blanc */
+  color: #1f2937 !important; /* Dark text on white */
   padding: 0.5rem 1rem !important;
   display: block !important;
   text-decoration: none !important;
@@ -4675,26 +4676,24 @@ body {
   color: #111827 !important;
 }
 
-/* 3. MENÚ ACTIU - Millor contrast */
+/* Active menu states */
 .nav-link.active {
-  background-color: #1e40af !important; /* Blau més clar que el fosc actual */
+  background-color: #1e40af !important; /* Accessible blue */
   color: #ffffff !important;
   border-radius: 0.5rem !important;
 }
 
-/* Fix pel dropdown actiu */
 .dropdown.active > .nav-link {
   background-color: #1e40af !important;
   color: #ffffff !important;
 }
 
-/* 4. MOBILE MENU - Fons blanc */
+/* 3. MOBILE RESPONSIVE NAVIGATION */
 .nav-links.active {
   background-color: #ffffff !important;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Mobile menu items */
 @media (max-width: 768px) {
   .nav-links {
     background-color: #ffffff !important;
@@ -4715,37 +4714,37 @@ body {
   }
 }
 
-/* 5. HERO SECTION - Mantenir el gradient però més suau */
+/* 4. HERO SECTIONS */
 .hero-nova {
   background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%) !important;
 }
 
-/* 6. SECCIONS - Assegurar fons blanc */
+/* 5. CONTENT SECTIONS */
 .section,
 section {
   background-color: #ffffff !important;
 }
 
-/* Seccions alternatives amb fons gris molt suau */
+/* Alternating sections with very subtle gray */
 .section:nth-child(even),
 section:nth-child(even) {
   background-color: #fafafa !important;
 }
 
-/* 7. CARDS I COMPONENTS - Fons blanc */
+/* 6. CARD COMPONENTS */
 .card {
   background-color: #ffffff !important;
   border: 1px solid #e5e7eb !important;
 }
 
-/* 8. ESTADÍSTIQUES - Millor contrast */
+/* 7. STATISTICS CARDS */
 .stat-card {
   background-color: #ffffff !important;
   border: 1px solid #e5e7eb !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* 9. PROGRAMES - Mantenir colors però amb millor contrast */
+/* 8. PROGRAM PAGES */
 .hero-programa {
   position: relative;
 }
@@ -4758,7 +4757,7 @@ section:nth-child(even) {
   pointer-events: none;
 }
 
-/* 10. FOOTER - Mantenir el seu color però assegurar llegibilitat */
+/* 9. FOOTER */
 footer {
   background-color: #111827 !important;
   color: #f9fafb !important;
@@ -4772,19 +4771,67 @@ footer a:hover {
   color: #ffffff !important;
 }
 
-/* 11. ELIMINAR QUALSEVOL FONS GRIS RESIDUAL */
+/* 10. UTILITY CLASSES - Replace inline styles */
+
+/* Hidden elements (replaces style="display:none") */
+.hidden-message {
+  display: none !important;
+}
+
+/* Success messages styling */
+.success-message {
+  display: none;
+  margin-top: 12px;
+}
+
+.success-message.show {
+  display: block !important;
+}
+
+/* Calculator results */
+.calculator-results-hidden {
+  display: none !important;
+}
+
+.calculator-results-visible {
+  display: block !important;
+}
+
+/* 11. BACKGROUND COLOR OVERRIDES */
 .bg-gray-50,
 .bg-gray-100,
 .bg-gray-200 {
   background-color: #ffffff !important;
 }
 
-/* Variables override per assegurar blancs */
+/* 12. CSS VARIABLES OVERRIDE */
 :root {
   --bg-body: #ffffff !important;
   --bg-surface: #ffffff !important;
-  --bg-gray-50: #fafafa !important; /* Gris molt suau en lloc de fosc */
+  --bg-gray-50: #fafafa !important; /* Very light gray instead of dark */
   --bg-gray-100: #f5f5f5 !important;
+  --text-primary: #1f2937 !important;
+  --text-secondary: #4b5563 !important;
+  --border-color: #e5e7eb !important;
+}
+
+/* 13. ENSURE NO DARK BACKGROUNDS */
+* {
+  /* Reset any dark backgrounds that might slip through */
+  background-color: transparent;
+}
+
+body * {
+  /* Only apply backgrounds where explicitly set */
+  background-color: inherit;
+}
+
+/* Explicit white backgrounds for main containers */
+main,
+.main-content,
+.container,
+.page-content {
+  background-color: #ffffff !important;
 }
 
 

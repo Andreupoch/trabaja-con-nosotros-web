@@ -983,7 +983,7 @@
                 </form>
             </div>
             
-            <div class="calculator-results" id="calculator-results" style="display: none;">
+            <div class="calculator-results calculator-results-hidden" id="calculator-results">
                 <h3>Les teves opcions de finançament</h3>
                 <div class="results-grid" id="results-grid">
                     <!-- Els resultats es generaran amb JavaScript -->
@@ -1364,7 +1364,8 @@ function calculateFinancing() {
     });
     
     document.getElementById('results-grid').innerHTML = resultsHTML;
-    document.getElementById('calculator-results').style.display = 'block';
+    document.getElementById('calculator-results').classList.remove('calculator-results-hidden');
+    document.getElementById('calculator-results').classList.add('calculator-results-visible');
 }
 
 function showApplicationForm() {
