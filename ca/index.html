@@ -783,7 +783,7 @@ Cada dia que passa, Catalunya perd negocis centenaris que són l'ànima dels nos
 <a href="/ca/salvem-carnisseries" class="cta-primari boto-gran">
 <span class="boto-icona">🥩</span> Programa "Salvem les Carnisseries"
 </a>
-<a href="/ca/businesses" class="cta-secundari">Explorar negocis</a>
+<a href="ca/businesses" class="cta-secundari">Explorar negocis</a>
 <a href="/ca/how-it-works" class="cta-secundari">Com funciona</a>
 </div>
 
@@ -970,7 +970,7 @@ Restaurant tradicional amb 35 anys d'història, clientela fidel i ubicació priv
 </div>
 
 <div class="text-center">
-<a href="/ca/businesses" class="btn btn-gradient"></a>
+<a href="ca/businesses" class="btn btn-gradient"></a>
 </div>
 </div>
 </section>
@@ -1246,7 +1246,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (selectedSector) params.append('sector', selectedSector);
         if (selectedLocation) params.append('location', selectedLocation);
         
-        window.location.href = '/ca/businesses' + (params.toString() ? '?' + params.toString() : '');
+        window.location.href = 'businesses' + (params.toString() ? '?' + params.toString() : '');
     }
 
     searchButton.addEventListener('click', performSearch);
