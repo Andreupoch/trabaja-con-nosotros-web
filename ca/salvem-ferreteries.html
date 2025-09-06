@@ -25,13 +25,13 @@
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/trabaja-con-nosotros-web/assets/favicon.svg">
-<link rel="icon" type="image/x-icon" href="/trabaja-con-nosotros-web/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/trabaja-con-nosotros-web/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/trabaja-con-nosotros-web/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/trabaja-con-nosotros-web/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="/trabaja-con-nosotros-web/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/trabaja-con-nosotros-web/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/trabaja-con-nosotros-web/assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/trabaja-con-nosotros-web/assets/apple-touch-icon.png">
 
 <!-- PWA Manifest -->
-<link rel="manifest" href="/trabaja-con-nosotros-web/manifest.json">
+<link rel="manifest" href="/trabaja-con-nosotros-web/assets/manifest.json">
 
 <!-- Theme -->
 <meta name="theme-color" content="#2563eb">
@@ -541,7 +541,7 @@
     <nav class="nav container" aria-label="Navegació principal">
         <a href="/trabaja-con-nosotros-web/ca/" class="logo-container" aria-label="Treballa amb Nosaltres - Página d'inici">
             <div class="logo">
-                <img src="../assets/images/trabaja-con-nosotros-logo.png" 
+                <img src="/trabaja-con-nosotros-web/assets/images/trabaja-con-nosotros-logo.png" 
                      alt="Treballa amb Nosaltres - Successió de Negocis Petits" 
                      width="480" height="240"
                      loading="eager">
@@ -668,10 +668,6 @@
         -->
     </nav>
 </header>
-
-<script>
-// Enhanced mobile menu functionality
-document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const dropdown = document.querySelector('.dropdown');
@@ -748,9 +744,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.remove('active');
             mobileMenuToggle.setAttribute('aria-label', 'Obrir menú');
         });
-    });
-});
-</script>
     <!-- Main Content Area --> 
     <main class="main-content">
         <section class="hero-programa-ferreteries">
@@ -813,10 +806,25 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="problema-card">
         <h3>👴 Envelliment crític</h3>
         <p>L'edat mitjana dels propietaris és de 68 anys. El 80% no té successió familiar i el 90% tancarà en els pròxims 5 anys.</p>
-        <div class="graf-edat">
-          <div class="barra" style="width: 85%;">+65 anys: 67%</div>
-          <div class="barra" style="width: 45%;">55-65 anys: 28%</div>
-          <div class="barra" style="width: 15%;">&lt;55 anys: 5%</div>
+        <div class="data-visualization">
+          <div class="data-bar">
+            <span class="data-bar__label">+65 anys: 67%</span>
+            <div class="data-bar__container">
+              <div class="data-bar__fill" data-value="67">67%</div>
+            </div>
+          </div>
+          <div class="data-bar">
+            <span class="data-bar__label">55-65 anys: 28%</span>
+            <div class="data-bar__container">
+              <div class="data-bar__fill" data-value="28">28%</div>
+            </div>
+          </div>
+          <div class="data-bar">
+            <span class="data-bar__label">&lt;55 anys: 5%</span>
+            <div class="data-bar__container">
+              <div class="data-bar__fill" data-value="5">5%</div>
+            </div>
+          </div>
         </div>
       </div>
       

@@ -1,0 +1,381 @@
+/* ===========================
+   PROGRAMES D'EMERGÈNCIA - ESTILS UNIFICATS
+   Un sol fitxer per tots els programes amb modificadors específics
+   =========================== */
+
+/* ===========================
+   BASE COMUNA PER TOTS ELS PROGRAMES
+   =========================== */
+
+.hero-programa {
+  color: white;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1f2937, #374151); /* Default gradient */
+}
+
+.hero-programa::before {
+  position: absolute;
+  font-size: 20rem;
+  opacity: 0.05;
+  right: -5rem;
+  top: -5rem;
+  transform: rotate(-15deg);
+}
+
+/* Banner de crisis comú */
+.crisi-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  border: 2px solid;
+  animation: pulsacio 2s infinite;
+}
+
+@keyframes pulsacio {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  50% { 
+    transform: scale(1.02); 
+    opacity: 0.9; 
+  }
+}
+
+.crisi-icona {
+  font-size: 1.5rem;
+  animation: icona-animacio 1.5s ease-in-out infinite;
+}
+
+@keyframes icona-animacio {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-3px) rotate(-5deg); }
+  75% { transform: translateY(3px) rotate(5deg); }
+}
+
+/* Grid estadístiques comú */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff, rgba(255, 255, 255, 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Seccions i contingut */
+.programa-section {
+  padding: 4rem 0;
+}
+
+.programa-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.programa-card {
+  background: var(--bg-white);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid;
+  transition: all 0.3s ease;
+}
+
+.programa-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   MODIFICADORS ESPECÍFICS PER PROGRAMA
+   =========================== */
+
+/* FERRETERIES */
+.hero-programa--ferreteries {
+  background: linear-gradient(135deg, #2C3E50, #34495E);
+}
+
+.hero-programa--ferreteries::before {
+  content: '🔨';
+}
+
+.crisi-banner--ferreteries {
+  background: rgba(255, 152, 0, 0.2);
+  border-color: rgba(255, 152, 0, 0.5);
+}
+
+.programa-card--ferreteries {
+  border-left-color: #FF9800;
+}
+
+/* FORNS */
+.hero-programa--forns {
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+}
+
+.hero-programa--forns::before {
+  content: '🥖';
+}
+
+.crisi-banner--forns {
+  background: rgba(139, 69, 19, 0.2);
+  border-color: rgba(139, 69, 19, 0.5);
+}
+
+.programa-card--forns {
+  border-left-color: #8B4513;
+}
+
+/* MERCERIES */
+.hero-programa--merceries {
+  background: linear-gradient(135deg, #9C27B0, #BA68C8);
+}
+
+.hero-programa--merceries::before {
+  content: '🧵';
+}
+
+.crisi-banner--merceries {
+  background: rgba(156, 39, 176, 0.2);
+  border-color: rgba(156, 39, 176, 0.5);
+}
+
+.programa-card--merceries {
+  border-left-color: #9C27B0;
+}
+
+/* PEIXATERIES */
+.hero-programa--peixateries {
+  background: linear-gradient(135deg, #006994, #0084C7);
+}
+
+.hero-programa--peixateries::before {
+  content: '🐟';
+}
+
+.crisi-banner--peixateries {
+  background: rgba(0, 132, 199, 0.2);
+  border-color: rgba(0, 132, 199, 0.5);
+}
+
+.programa-card--peixateries {
+  border-left-color: #0084C7;
+}
+
+/* CARNISSERIES */
+.hero-programa--carnisseries {
+  background: linear-gradient(135deg, #8B0000, #B22222);
+}
+
+.hero-programa--carnisseries::before {
+  content: '🥩';
+}
+
+.crisi-banner--carnisseries {
+  background: rgba(139, 0, 0, 0.2);
+  border-color: rgba(139, 0, 0, 0.5);
+}
+
+.programa-card--carnisseries {
+  border-left-color: #B22222;
+}
+
+/* ===========================
+   COMPONENTS ESPECÍFICS
+   =========================== */
+
+/* Gràfics de barres per dades */
+.data-visualization {
+  background: var(--bg-gray-50);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.data-bar {
+  margin-bottom: 1.5rem;
+}
+
+.data-bar__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.data-bar__container {
+  background: var(--bg-gray-200);
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.data-bar__fill {
+  height: 100%;
+  background: var(--brand-gradient);
+  border-radius: 15px;
+  transition: width 0.8s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Usar data attributes per les amplades */
+.data-bar__fill[data-value="10"] { width: 10%; }
+.data-bar__fill[data-value="15"] { width: 15%; }
+.data-bar__fill[data-value="20"] { width: 20%; }
+.data-bar__fill[data-value="25"] { width: 25%; }
+.data-bar__fill[data-value="30"] { width: 30%; }
+.data-bar__fill[data-value="35"] { width: 35%; }
+.data-bar__fill[data-value="40"] { width: 40%; }
+.data-bar__fill[data-value="45"] { width: 45%; }
+.data-bar__fill[data-value="50"] { width: 50%; }
+.data-bar__fill[data-value="55"] { width: 55%; }
+.data-bar__fill[data-value="60"] { width: 60%; }
+.data-bar__fill[data-value="65"] { width: 65%; }
+.data-bar__fill[data-value="70"] { width: 70%; }
+.data-bar__fill[data-value="75"] { width: 75%; }
+.data-bar__fill[data-value="80"] { width: 80%; }
+.data-bar__fill[data-value="85"] { width: 85%; }
+.data-bar__fill[data-value="90"] { width: 90%; }
+.data-bar__fill[data-value="95"] { width: 95%; }
+.data-bar__fill[data-value="100"] { width: 100%; }
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--bg-gray-300);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timeline-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 2rem);
+}
+
+.timeline-date {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-programa {
+    padding: 3rem 0;
+  }
+  
+  .hero-programa::before {
+    font-size: 10rem;
+  }
+  
+  .timeline::before {
+    left: 1rem;
+  }
+  
+  .timeline-item {
+    flex-direction: row !important;
+    margin-left: 2rem;
+  }
+  
+  .timeline-content {
+    width: 100%;
+  }
+  
+  .timeline-date {
+    left: 1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-programa {
+    padding: 2rem 0;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .programa-section {
+    padding: 2rem 0;
+  }
+}

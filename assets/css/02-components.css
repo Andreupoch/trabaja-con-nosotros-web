@@ -1271,3 +1271,45 @@
   color: var(--text-primary);
   font-size: var(--font-size-lg);
 }
+
+/* ===========================
+   MOBILE MENU AND DROPDOWN STATES
+   Fix for cross-platform consistency
+   =========================== */
+
+/* Mobile menu active state */
+.nav-links.active {
+  display: flex !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-white);
+  flex-direction: column;
+  padding: var(--space-4);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Dropdown active state (for JS control instead of hover) */
+.dropdown.active .dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure dropdown works on touch devices */
+@media (max-width: 768px) {
+  .dropdown .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+  }
+  
+  .dropdown.active .dropdown-menu {
+    display: block !important;
+  }
+}
