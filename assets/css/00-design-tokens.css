@@ -89,8 +89,9 @@
   --bg-gradient: var(--brand-gradient);
   
   /* Hero and overlay backgrounds */
-  --bg-hero-overlay: rgba(31, 41, 55, 0.90);     /* Increased opacity for readability */
-  --bg-hero-overlay-light: rgba(31, 41, 55, 0.85); /* Still strong contrast */
+  /* Hero overlay tuned lighter for better logo/background visibility */
+  --bg-hero-overlay: rgba(31, 41, 55, 0.55);
+  --bg-hero-overlay-light: rgba(31, 41, 55, 0.45);
   --bg-overlay-primary: rgba(37, 99, 235, 0.90);
   --bg-overlay-secondary: rgba(6, 182, 212, 0.85);
   

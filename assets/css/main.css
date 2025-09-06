@@ -99,8 +99,9 @@
   --bg-gradient: var(--brand-gradient);
   
   /* Hero and overlay backgrounds */
-  --bg-hero-overlay: rgba(31, 41, 55, 0.90);     /* Increased opacity for readability */
-  --bg-hero-overlay-light: rgba(31, 41, 55, 0.85); /* Still strong contrast */
+  /* Hero overlay tuned lighter for better logo/background visibility */
+  --bg-hero-overlay: rgba(31, 41, 55, 0.55);
+  --bg-hero-overlay-light: rgba(31, 41, 55, 0.45);
   --bg-overlay-primary: rgba(37, 99, 235, 0.90);
   --bg-overlay-secondary: rgba(6, 182, 212, 0.85);
   
@@ -1967,6 +1968,89 @@ svg {
   .percentatge-gran {
     font-size: var(--font-size-7xl);
   }
+}
+
+/* ===========================
+   HOMEPAGE FIXES & ALIASES
+   Map new content classes to existing styles
+   =========================== */
+
+/* Utility to support legacy markup */
+.text-dark { color: var(--text-primary); }
+
+/* Crisis banner (alias of .crisi-alert-banner) */
+.crisi-alert-banner-millor {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(239, 68, 68, 0.9);
+  color: var(--text-inverse);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-12);
+  animation: pulse 2s infinite;
+}
+
+/* Context wrapper */
+.crisi-contextual-elegant { text-align: center; }
+
+/* Enhanced statistics (alias to existing patterns) */
+.estadistiques-impactants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-8);
+  margin: var(--space-8) 0;
+}
+
+.estadistica-destacada-gran {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  color: var(--text-inverse);
+}
+
+.numero-impactant {
+  display: block;
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--text-inverse);
+}
+
+.descripcio-clara {
+  display: block;
+  color: var(--text-inverse-secondary);
+  margin-top: var(--space-2);
+}
+
+.icona-contextual { font-size: var(--font-size-2xl); margin-top: var(--space-2); opacity: 0.9; }
+
+/* Hope message */
+.missatge-esperanca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  color: var(--text-inverse);
+  font-weight: var(--font-weight-semibold);
+  margin-top: var(--space-6);
+}
+.icona-esperanca { font-size: var(--font-size-xl); }
+.text-esperanca { color: var(--text-inverse); }
+
+/* Subtitle under hero */
+.subtitle-hero {
+  max-width: 70ch;
+  margin: var(--space-8) auto;
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
 }
 
 
