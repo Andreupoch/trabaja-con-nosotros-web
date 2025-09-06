@@ -5106,6 +5106,36 @@ a:hover {
 .text-warning { color: var(--warning); }
 .text-error { color: var(--error); }
 
+/* Section-specific background and text contrast fixes */
+section.text-primary {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+section.text-white {
+  background-color: var(--bg-dark);
+  color: var(--text-inverse);
+}
+
+/* Hero destacat section - ensure proper background and contrast */
+.destacat.text-white {
+  background: var(--bg-gradient-primary);
+  color: var(--text-inverse);
+  min-height: 500px;
+  padding: var(--space-3xl) 0;
+}
+
+/* Ensure all text elements within destacat section are visible */
+.destacat.text-white * {
+  color: var(--text-inverse) !important;
+}
+
+/* Exception for specific colored elements like buttons */
+.destacat.text-white .cta-primari,
+.destacat.text-white .boto-gran {
+  color: var(--text-primary) !important;
+}
+
 .bg-primary { background-color: var(--bg-primary); }
 .bg-secondary { background-color: var(--bg-secondary); }
 .bg-gradient { background: var(--bg-gradient-primary); }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="" dir="ltr">
+<html lang="ca" dir="ltr">
 <head>
     <!-- Base Meta Tags -->
 <!-- Meta bàsics -->
@@ -19,19 +19,19 @@
 <meta name="dcterms.audience" content="Business Owners, Entrepreneurs, Small Business Community">
 
 <!-- Canonical i Hreflang -->
-<link rel="canonical" href="/">
-<link rel="alternate" hreflang="ca" href="/ca/">
-<link rel="alternate" hreflang="x-default" href="/">
+<link rel="canonical" href="/trabaja-con-nosotros-web/ca/">
+<link rel="alternate" hreflang="ca" href="/trabaja-con-nosotros-web/ca/">
+<link rel="alternate" hreflang="x-default" href="/trabaja-con-nosotros-web/ca/">
 
 <!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 
 <!-- PWA Manifest -->
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="../manifest.json">
 
 <!-- Theme -->
 <meta name="theme-color" content="#2563eb">
@@ -49,9 +49,9 @@
 <link rel="dns-prefetch" href="https://bsky.app">
 
 <!-- Resource Hints per LLM-referenced URLs -->
-<link rel="prefetch" href="/serveis">
-<link rel="prefetch" href="/preus">
-<link rel="prefetch" href="/contacte">
+<link rel="prefetch" href="/trabaja-con-nosotros-web/ca/serveis">
+<link rel="prefetch" href="/trabaja-con-nosotros-web/ca/preus">
+<link rel="prefetch" href="/trabaja-con-nosotros-web/ca/contacte">
 
 <!-- LLM Optimization Meta Tags -->
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1, max-preview:-1">
@@ -70,9 +70,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Encara hi som a temps d'evitar-ho.">
 <meta property="og:description" content="Website description">
-<meta property="og:url" content="/">
+<meta property="og:url" content="/trabaja-con-nosotros-web/ca/">
 <meta property="og:site_name" content="AntropoBlue">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="ca_ES">
 <meta property="og:image" content="https://antropoblue.com/assets/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -106,7 +106,7 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Inici",
-            "item": "/"
+            "item": "/trabaja-con-nosotros-web/ca/"
         }    ]
 }
 </script><!-- LocalBusiness / Organization Schema -->
@@ -116,8 +116,8 @@
     "@type": ["Organization","LocalBusiness"],
     "name": "Treballa amb Nosaltres — Successió Empresarial",
     "description": "Plataforma que connecta propietaris de negocis amb joves emprenedors per garantir la successió empresarial",
-    "url": "",
-    "logo": "assets/images/trabaja-con-nosotros-logo.png",
+    "url": "/trabaja-con-nosotros-web/",
+    "logo": "/trabaja-con-nosotros-web/assets/images/trabaja-con-nosotros-logo.png",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "",
@@ -160,7 +160,7 @@
     "name": "Treballa amb Nosaltres - Successió Empresarial",
     "alternateName": ["AntropoBlue", "", "BlueSky Analytics"],
     "description": "Plataforma que salva negocis tradicionals connectant propietaris que es volen jubilar amb emprenedors que busquen oportunitats.",
-    "url": "/",
+    "url": "/trabaja-con-nosotros-web/ca/",
     "applicationCategory": ["BusinessApplication", "AnalyticsApplication", "SocialNetworkingApplication"],
     "operatingSystem": "Web Browser",
     "browserRequirements": "",
@@ -248,7 +248,7 @@
     
     // GA4 Configuration with enhanced measurement and consent mode
     gtag('config', 'G-N8EREZXB5J', {
-        'page_language': '',
+        'page_language': 'ca',
         'page_type': 'page',
         'custom_map': {
             'dimension1': 'page_language',
@@ -268,7 +268,7 @@
             el.addEventListener('click', function() {
                 const buttonText = this.textContent.trim();
                 gtag('event', 'begin_trial', {
-                    'page_language': '',
+                    'page_language': 'ca',
                     'page_type': 'page',
                     'event_category': 'conversion',
                     'event_label': buttonText,
@@ -289,7 +289,7 @@
         forms.forEach(function(form) {
             form.addEventListener('submit', function(e) {
                 gtag('event', 'generate_lead', {
-                    'page_language': '',
+                    'page_language': 'ca',
                     'event_category': 'conversion',
                     'form_name': this.id || 'contact_form',
                     'value': 5  // Lead value
@@ -297,7 +297,7 @@
                 
                 // Also track as custom event
                 gtag('event', 'contact_submit', {
-                    'page_language': '',
+                    'page_language': 'ca',
                     'event_category': 'lead_generation'
                 });
             });
@@ -307,7 +307,7 @@
         document.querySelectorAll('[data-cta="pricing"]').forEach(function(el) {
             el.addEventListener('click', function() {
                 gtag('event', 'pricing_cta_click', {
-                    'page_language': '',
+                    'page_language': 'ca',
                     'plan_type': this.dataset.plan || 'unknown',
                     'event_category': 'engagement'
                 });
@@ -318,7 +318,7 @@
         document.querySelectorAll('[data-cta="guide"], [data-cta="tutorial"]').forEach(function(el) {
             el.addEventListener('click', function() {
                 gtag('event', 'guides_tutorial_click', {
-                    'page_language': '',
+                    'page_language': 'ca',
                     'guide_type': this.dataset.guide || 'general',
                     'event_category': 'education'
                 });
@@ -329,7 +329,7 @@
         document.querySelectorAll('.lang-dropdown a').forEach(function(el) {
             el.addEventListener('click', function() {
                 gtag('event', 'language_switch', {
-                    'from_language': '',
+                    'from_language': 'ca',
                     'to_language': this.hreflang,
                     'event_category': 'navigation'
                 });
@@ -346,7 +346,7 @@
                     scrollTracked[threshold] = true;
                     gtag('event', 'scroll', {
                         'percent_scrolled': threshold,
-                        'page_language': '',
+                        'page_language': 'ca',
                         'page_type': 'page'
                     });
                 }
@@ -393,7 +393,7 @@
         <div class="cookie-text">
             <h3>🍪 Configuració de Cookies</h3>
             <p>Utilitzem cookies per millorar la teva experiència i analitzar el tràfic del nostre web.</p>
-            <a href="/privacy" style="color: #5197fc; text-decoration: underline;">Política de Privacitat</a>
+            <a href="/trabaja-con-nosotros-web/ca/privacy" style="color: #5197fc; text-decoration: underline;">Política de Privacitat</a>
         </div>
         <div class="cookie-options">
             <label class="cookie-option">
@@ -528,8 +528,8 @@
     <!-- Header -->
 <header class="header">
     <nav class="nav container" aria-label="Navegació principal">
-        <a href="/" class="logo" aria-label="Treballa amb Nosaltres - Página d'inici">
-            <img src="/assets/images/trabaja-con-nosotros-logo.png" 
+        <a href="/trabaja-con-nosotros-web/ca/" class="logo" aria-label="Treballa amb Nosaltres - Página d'inici">
+            <img src="../assets/images/trabaja-con-nosotros-logo.png" 
                  alt="Treballa amb Nosaltres - Successió de Negocis Petits" 
                  width="180" height="90"
                  loading="eager">
@@ -544,76 +544,76 @@
         
         <ul class="nav-links" id="nav-links" role="menubar">
             <li role="none">
-                <a href="/" role="menuitem" 
+                <a href="/trabaja-con-nosotros-web/ca/" role="menuitem" 
                    class="active">Inici</a>
             </li>
             <li role="none">
-                <a href="/businesses" role="menuitem" 
+                <a href="/trabaja-con-nosotros-web/ca/businesses" role="menuitem" 
                    class="">Negocis</a>
             </li>
             <li role="none">
-                <a href="/how-it-works" role="menuitem" 
+                <a href="/trabaja-con-nosotros-web/ca/how-it-works" role="menuitem" 
                    class="">Com Funciona</a>
             </li>
             <li class="dropdown" role="none">
                 <a href="#" class="dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">Serveis</a>
                 <div class="dropdown-menu" role="menu" aria-label="Menú Serveis">
                     <div class="dropdown-section" role="group">
-                        <a href="/services" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/services" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">🧭</span>Serveis
                         </a>
-                        <a href="/programs" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/programs" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">🎓</span>Programes
                         </a>
-                        <a href="/products" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/products" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">🧩</span>Productes
                         </a>
-                        <a href="/mentorship" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/mentorship" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">🤝</span>Mentoria
                         </a>
-                        <a href="/financing" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/financing" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">💰</span>Finançament
                         </a>
-                        <a href="/resources" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/resources" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">📚</span>Recursos
                         </a>
                     </div>
                     <div class="dropdown-section" role="group">
-                        <a href="/partners" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/partners" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">🤝</span>Aliances
                         </a>
-                        <a href="/public-sector" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/public-sector" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">🏛️</span>Administracions públiques
                         </a>
-                        <a href="/finance-partners" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/finance-partners" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">🏦</span>Entitats financeres
                         </a>
-                        <a href="/mentors" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/mentors" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">🧑‍🏫</span>Mentors
                         </a>
-                        <a href="/success-stories" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/success-stories" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">⭐</span>Històries d'Èxit
                         </a>
-                        <a href="/impact" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/impact" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">📊</span>Impacte
                         </a>
-                        <a href="/transparency" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/transparency" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">🔎</span>Transparència
                         </a>
-                        <a href="/faq" role="menuitem" 
+                        <a href="/trabaja-con-nosotros-web/ca/faq" role="menuitem" 
                            class="">
                             <span class="dropdown-icon" aria-hidden="true">❓</span>Preguntes freqüents
                         </a>
@@ -624,12 +624,12 @@
         
         <!-- User Type Selection -->
         <div class="user-type-selector">
-            <a href="/business-owners" class="user-type-button business-owner" 
+            <a href="/trabaja-con-nosotros-web/ca/business-owners" class="user-type-button business-owner" 
                aria-label="Per a propietaris de negocis">
                 <span class="user-icon">👔</span>
                 <span class="user-label">Per a Propietaris</span>
             </a>
-            <a href="/entrepreneurs" class="user-type-button entrepreneur" 
+            <a href="/trabaja-con-nosotros-web/ca/entrepreneurs" class="user-type-button entrepreneur" 
                aria-label="Per a emprenedors">
                 <span class="user-icon">🚀</span>
                 <span class="user-label">Per a Emprenedors</span>
@@ -642,12 +642,12 @@
             <span class="current-lang" aria-label="Idioma actual">CA</span>
             <!-- Future expansion for other languages
             <button class="lang-toggle" aria-label="Canviar idioma">
-                <span class="current-lang"></span> ▼
+                <span class="current-lang">CA</span> ▼
             </button>
             <div class="lang-dropdown">
-                <a href="ca/" data-lang="ca" class="">Català</a>
-                <a href="es/" data-lang="es" class="">Español</a>
-                <a href="en/" data-lang="en" class="">English</a>
+                <a href="/trabaja-con-nosotros-web/ca/" data-lang="ca" class="active">Català</a>
+                <a href="/trabaja-con-nosotros-web/es/" data-lang="es" class="">Español</a>
+                <a href="/trabaja-con-nosotros-web/en/" data-lang="en" class="">English</a>
             </div>
             --
         </div>
@@ -780,11 +780,11 @@ Cada dia que passa, Catalunya perd negocis centenaris que són l'ànima dels nos
 </div>
 
 <div class="destacat-cta flex justify-center flex-wrap">
-<a href="/salvem-carnisseries" class="cta-primari boto-gran">
+<a href="/trabaja-con-nosotros-web/ca/salvem-carnisseries" class="cta-primari boto-gran">
 <span class="boto-icona">🥩</span> Programa "Salvem les Carnisseries"
 </a>
-<a href="/businesses" class="cta-secundari">Explorar negocis</a>
-<a href="/how-it-works" class="cta-secundari">Com funciona</a>
+<a href="/trabaja-con-nosotros-web/ca/businesses" class="cta-secundari">Explorar negocis</a>
+<a href="/trabaja-con-nosotros-web/ca/how-it-works" class="cta-secundari">Com funciona</a>
 </div>
 
 <div class="confianca-seccio text-center">
@@ -842,8 +842,8 @@ Cada dia que passa, Catalunya perd negocis centenaris que són l'ànima dels nos
     </div>
   </div>
   <div class="text-center mt-xl">
-    <a href="/impact" class="btn btn-outline">Veure l'impacte</a>
-    <a href="/transparency" class="btn btn-outline">Transparència</a>
+    <a href="/trabaja-con-nosotros-web/ca/impact" class="btn btn-outline">Veure l'impacte</a>
+    <a href="/trabaja-con-nosotros-web/ca/transparency" class="btn btn-outline">Transparència</a>
   </div>
 </div>
 </section>
@@ -912,7 +912,7 @@ Cada dia que passa, Catalunya perd negocis centenaris que són l'ànima dels nos
 Restaurant tradicional amb 35 anys d'història, clientela fidel i ubicació privilegiada al centre històric.</div>
 <div class="negoci-peu">
 <span class="urgencia-distintiu">Successió urgent</span>
-<a href="/businesses/can-miquel" class="veure-detalls"></a>
+<a href="/trabaja-con-nosotros-web/ca/businesses/can-miquel" class="veure-detalls"></a>
 </div>
 </div>
 
@@ -938,7 +938,7 @@ Restaurant tradicional amb 35 anys d'història, clientela fidel i ubicació priv
 <div class="negoci-descripcio">Pastisseria artesanal amb receptes familiars transmeses de generació en generació.</div>
 <div class="negoci-peu">
 <span class="mentor-distintiu">Mentor disponible</span>
-<a href="/businesses/dolc-tradicio" class="veure-detalls"></a>
+<a href="/trabaja-con-nosotros-web/ca/businesses/dolc-tradicio" class="veure-detalls"></a>
 </div>
 </div>
 
@@ -964,13 +964,13 @@ Restaurant tradicional amb 35 anys d'història, clientela fidel i ubicació priv
 <div class="negoci-descripcio">Taller multimarca amb clientela consolidada, equipament modern i ubicació estratègica.</div>
 <div class="negoci-peu">
 <span class="financament-distintiu">Finançament disponible</span>
-<a href="/businesses/taller-riera" class="veure-detalls"></a>
+<a href="/trabaja-con-nosotros-web/ca/businesses/taller-riera" class="veure-detalls"></a>
 </div>
 </div>
 </div>
 
 <div class="text-center">
-<a href="/businesses" class="btn btn-gradient"></a>
+<a href="/trabaja-con-nosotros-web/ca/businesses" class="btn btn-gradient"></a>
 </div>
 </div>
 </section>
@@ -1034,7 +1034,7 @@ Restaurant tradicional amb 35 anys d'història, clientela fidel i ubicació priv
 </div>
 
 <div class="text-center">
-<a href="/how-it-works" class="btn btn-outline"></a>
+<a href="/trabaja-con-nosotros-web/ca/how-it-works" class="btn btn-outline"></a>
 </div>
 </div>
 </section>
@@ -1062,7 +1062,7 @@ Restaurant tradicional amb 35 anys d'història, clientela fidel i ubicació priv
 <span class="estadistica-etiqueta">Èxit mentoria</span>
 </div>
 </div>
-<a href="/mentorship" class="servei-cta"></a>
+<a href="/trabaja-con-nosotros-web/ca/mentorship" class="servei-cta"></a>
 </div>
 
 <div class="servei-targeta">
@@ -1079,7 +1079,7 @@ Restaurant tradicional amb 35 anys d'història, clientela fidel i ubicació priv
 <span class="estadistica-etiqueta">Tipus d'interès mitjà</span>
 </div>
 </div>
-<a href="/financing" class="servei-cta"></a>
+<a href="/trabaja-con-nosotros-web/ca/financing" class="servei-cta"></a>
 </div>
 
 <div class="servei-targeta">
@@ -1096,7 +1096,7 @@ Restaurant tradicional amb 35 anys d'història, clientela fidel i ubicació priv
 <span class="estadistica-etiqueta">Tallers mensuals</span>
 </div>
 </div>
-<a href="/resources" class="servei-cta"></a>
+<a href="/trabaja-con-nosotros-web/ca/resources" class="servei-cta"></a>
 </div>
 </div>
 </div>
@@ -1167,7 +1167,7 @@ Restaurant tradicional amb 35 anys d'història, clientela fidel i ubicació priv
 </div>
 
 <div class="text-center mt-xl">
-<a href="/success-stories" class="btn btn-outline"></a>
+<a href="/trabaja-con-nosotros-web/ca/success-stories" class="btn btn-outline"></a>
 </div>
 </div>
 </section>
@@ -1198,12 +1198,12 @@ Restaurant tradicional amb 35 anys d'història, clientela fidel i ubicació priv
 <div class="accio-grup">
 <h3 class="accio-titol">Propietaris de negocis</h3>
 <p class="accio-descripcio">Assegura la continuïtat del teu llegat empresarial</p>
-<a href="/business-owners" class="btn btn-primari"></a>
+<a href="/trabaja-con-nosotros-web/ca/business-owners" class="btn btn-primari"></a>
 </div>
 <div class="accio-grup">
 <h3 class="accio-titol">Emprenedors</h3>
 <p class="accio-descripcio">Accedeix a oportunitats de negoci consolidat</p>
-<a href="/entrepreneurs" class="btn btn-gradient"></a>
+<a href="/trabaja-con-nosotros-web/ca/entrepreneurs" class="btn btn-gradient"></a>
 </div>
 </div>
 </div>
@@ -1292,20 +1292,20 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- Platform Links -->
             <div class="footer-section">
                 <h4>Plataforma</h4>
-                <a href="/businesses">Explorar negocis</a>
-                <a href="/how-it-works">Com funciona</a>
-                <a href="/success-stories">Històries d'èxit</a>
-                <a href="/impact">Impacte</a>
+                <a href="/trabaja-con-nosotros-web/ca/businesses">Explorar negocis</a>
+                <a href="/trabaja-con-nosotros-web/ca/how-it-works">Com funciona</a>
+                <a href="/trabaja-con-nosotros-web/ca/success-stories">Històries d'èxit</a>
+                <a href="/trabaja-con-nosotros-web/ca/impact">Impacte</a>
             </div>
             
             <!-- Services Links -->
             <div class="footer-section">
                 <h4>Serveis</h4>
-                <a href="/mentorship">Mentoria</a>
-                <a href="/financing">Finançament</a>
-                <a href="/resources">Recursos</a>
-                <a href="/business-owners">Per a propietaris</a>
-                <a href="/entrepreneurs">Per a emprenedors</a>
+                <a href="/trabaja-con-nosotros-web/ca/mentorship">Mentoria</a>
+                <a href="/trabaja-con-nosotros-web/ca/financing">Finançament</a>
+                <a href="/trabaja-con-nosotros-web/ca/resources">Recursos</a>
+                <a href="/trabaja-con-nosotros-web/ca/business-owners">Per a propietaris</a>
+                <a href="/trabaja-con-nosotros-web/ca/entrepreneurs">Per a emprenedors</a>
             </div>
             
             <!-- Support Links -->
@@ -1313,17 +1313,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h4>Suport</h4>
                 <a href="tel:+34932123456">Telèfon: +34 932 123 456</a>
                 <a href="mailto:info@trabajaconnosotros.cat">Correu: info@trabajaconnosotros.cat</a>
-                <a href="/contact">Formulari de contacte</a>
-                <a href="/help">Centre d'ajuda</a>
+                <a href="/trabaja-con-nosotros-web/ca/contact">Formulari de contacte</a>
+                <a href="/trabaja-con-nosotros-web/ca/help">Centre d'ajuda</a>
             </div>
             
             <!-- Legal Links -->
             <div class="footer-section">
                 <h4>Legal</h4>
-                <a href="/privacy">Política de privacitat</a>
-                <a href="/terms">Condicions d'ús</a>
-                <a href="/cookies">Política de cookies</a>
-                <a href="/legal-notice">Avís legal</a>
+                <a href="/trabaja-con-nosotros-web/ca/privacy">Política de privacitat</a>
+                <a href="/trabaja-con-nosotros-web/ca/terms">Condicions d'ús</a>
+                <a href="/trabaja-con-nosotros-web/ca/cookies">Política de cookies</a>
+                <a href="/trabaja-con-nosotros-web/ca/legal-notice">Avís legal</a>
             </div>
         </div>
         
