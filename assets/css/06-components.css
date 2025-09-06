@@ -282,21 +282,39 @@
 }
 
 /* Logo */
-.logo {
+.logo-container {
     display: flex;
     align-items: center;
     text-decoration: none;
     flex-shrink: 0;
 }
 
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .logo img {
-    height: 35px;
+    height: 50px;
     width: auto;
     transition: transform var(--transition-fast);
 }
 
-.logo:hover img {
+.logo-slogan {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    font-weight: 400;
+    margin-top: 0.125rem;
+    font-style: italic;
+}
+
+.logo-container:hover img {
     transform: scale(1.05);
+}
+
+.logo-container:hover .logo-slogan {
+    color: var(--primary-blue);
 }
 
 /* Footer */
@@ -372,7 +390,12 @@
     }
     
     .logo img {
-        height: 32px;
+        height: 40px;
+    }
+    
+    .logo-slogan {
+        font-size: 0.6875rem;
+        margin-top: 0.0625rem;
     }
 }
 

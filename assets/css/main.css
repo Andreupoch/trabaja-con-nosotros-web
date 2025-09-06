@@ -1810,21 +1810,39 @@ a:hover {
 }
 
 /* Logo */
-.logo {
+.logo-container {
     display: flex;
     align-items: center;
     text-decoration: none;
     flex-shrink: 0;
 }
 
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .logo img {
-    height: 35px;
+    height: 50px;
     width: auto;
     transition: transform var(--transition-fast);
 }
 
-.logo:hover img {
+.logo-slogan {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    font-weight: 400;
+    margin-top: 0.125rem;
+    font-style: italic;
+}
+
+.logo-container:hover img {
     transform: scale(1.05);
+}
+
+.logo-container:hover .logo-slogan {
+    color: var(--primary-blue);
 }
 
 /* Footer */
@@ -1900,7 +1918,12 @@ a:hover {
     }
     
     .logo img {
-        height: 32px;
+        height: 40px;
+    }
+    
+    .logo-slogan {
+        font-size: 0.6875rem;
+        margin-top: 0.0625rem;
     }
 }
 
@@ -17872,5 +17895,609 @@ ${getFullCSS()}
   .fase-contingut {
     padding: 1.5rem;
   }
+}
+
+
+/* ============ BUSINESSES-PAGE.CSS ============ */
+/* ===========================
+   BUSINESSES PAGE STYLES
+   Utilitzant el sistema de disseny centralitzat
+   =========================== */
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+
+.hero-section {
+    background: var(--bg-gradient-primary);
+    padding: var(--space-6xl) 0;
+    color: var(--text-inverse);
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: var(--font-4xl);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-lg);
+    line-height: var(--leading-tight);
+}
+
+.hero-section .lead {
+    font-size: var(--font-xl);
+    font-weight: var(--font-normal);
+    margin-bottom: var(--space-4xl);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===========================
+   SEARCH CONTAINER
+   =========================== */
+
+.search-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-3xl);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+    flex-wrap: nowrap;
+}
+
+.search-input {
+    flex: 1;
+    padding: var(--space-lg) var(--space-xl);
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+    font-size: var(--font-base);
+    font-family: var(--font-family-primary);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all var(--transition-normal);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--secondary-blue);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.search-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.search-btn {
+    padding: var(--space-lg) var(--space-3xl);
+    background: var(--secondary-blue);
+    color: var(--text-inverse);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--font-base);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.search-btn:hover {
+    background: var(--primary-blue-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Filtres */
+.filters {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-select {
+    padding: var(--space-md) var(--space-lg);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-inverse);
+    font-size: var(--font-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    min-width: 140px;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--secondary-blue);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.filter-select option {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* ===========================
+   BUSINESS GRID SECTION
+   =========================== */
+
+.business-grid-section {
+    padding: var(--space-6xl) 0;
+    background: var(--bg-secondary);
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-4xl);
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+}
+
+.results-header h2 {
+    font-size: var(--font-2xl);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.view-options {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.view-btn {
+    padding: var(--space-sm) var(--space-lg);
+    border: 2px solid var(--gray-300);
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: var(--font-sm);
+    font-weight: var(--font-medium);
+}
+
+.view-btn.active,
+.view-btn:hover {
+    border-color: var(--primary-blue);
+    background: var(--primary-blue);
+    color: var(--text-inverse);
+}
+
+/* ===========================
+   BUSINESS GRID
+   =========================== */
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: var(--space-3xl);
+    margin-bottom: var(--space-6xl);
+}
+
+/* ===========================
+   BUSINESS CARD
+   =========================== */
+
+.business-card {
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    overflow: hidden;
+    position: relative;
+}
+
+.business-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.business-card.featured {
+    border: 2px solid var(--secondary-blue);
+    box-shadow: var(--shadow-md);
+}
+
+.business-card.featured::before {
+    content: "DESTACAT";
+    position: absolute;
+    top: var(--space-lg);
+    left: var(--space-lg);
+    background: var(--secondary-blue);
+    color: var(--text-inverse);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-xs);
+    font-weight: var(--font-bold);
+    z-index: 2;
+}
+
+/* Business Image */
+.business-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.business-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.business-card:hover .business-image img {
+    transform: scale(1.05);
+}
+
+.business-status {
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    background: var(--success);
+    color: var(--text-inverse);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-xs);
+    font-weight: var(--font-semibold);
+}
+
+.favorite-btn {
+    position: absolute;
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: var(--font-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.favorite-btn:hover {
+    background: var(--text-inverse);
+    transform: scale(1.1);
+}
+
+/* Business Content */
+.business-content {
+    padding: var(--space-3xl);
+}
+
+.business-content h3 {
+    font-size: var(--font-xl);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin: 0 0 var(--space-lg) 0;
+    line-height: var(--leading-tight);
+}
+
+.business-description {
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-2xl);
+    font-size: var(--font-base);
+}
+
+.business-meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-3xl);
+}
+
+.business-meta span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+}
+
+/* Business Stats */
+.business-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-3xl);
+    padding: var(--space-2xl);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: var(--font-lg);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.stat span {
+    font-size: var(--font-xs);
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Business Actions */
+.business-actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.business-actions .btn {
+    flex: 1;
+    text-align: center;
+    min-width: 140px;
+}
+
+/* ===========================
+   BUTTONS (inherited from design system)
+   =========================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md) var(--space-xl);
+    font-size: var(--font-base);
+    font-weight: var(--font-semibold);
+    font-family: var(--font-family-primary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    border: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    color: var(--text-inverse);
+}
+
+.btn-primary:hover {
+    background: var(--primary-blue-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-outline:hover {
+    background: var(--primary-blue);
+    color: var(--text-inverse);
+}
+
+.btn-secondary {
+    background: var(--secondary-blue);
+    color: var(--text-inverse);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-blue);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ===========================
+   PAGINATION
+   =========================== */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.page-numbers {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.page-number {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--gray-300);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-medium);
+    transition: all var(--transition-fast);
+}
+
+.page-number:hover,
+.page-number.active {
+    border-color: var(--primary-blue);
+    background: var(--primary-blue);
+    color: var(--text-inverse);
+}
+
+/* ===========================
+   CTA SECTION
+   =========================== */
+
+.cta-section {
+    padding: var(--space-6xl) 0;
+    background: var(--bg-primary);
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-4xl);
+}
+
+.cta-card {
+    background: var(--bg-gradient-secondary);
+    color: var(--text-inverse);
+    padding: var(--space-4xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal);
+}
+
+.cta-card:hover {
+    transform: translateY(-4px);
+}
+
+.cta-card h3 {
+    font-size: var(--font-2xl);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-lg);
+}
+
+.cta-card p {
+    font-size: var(--font-base);
+    margin-bottom: var(--space-3xl);
+    opacity: 0.9;
+    line-height: var(--leading-relaxed);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 1024px) {
+    .business-grid {
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: var(--space-2xl);
+    }
+    
+    .search-container {
+        padding: var(--space-2xl);
+    }
+    
+    .hero-section h1 {
+        font-size: var(--font-3xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: var(--space-4xl) 0;
+    }
+    
+    .hero-section h1 {
+        font-size: var(--font-2xl);
+    }
+    
+    .hero-section .lead {
+        font-size: var(--font-lg);
+    }
+    
+    .search-container {
+        padding: var(--space-xl);
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .business-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    
+    .business-content {
+        padding: var(--space-2xl);
+    }
+    
+    .business-stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+        padding: var(--space-xl);
+    }
+    
+    .business-actions {
+        flex-direction: column;
+    }
+    
+    .business-actions .btn {
+        min-width: auto;
+    }
+    
+    .results-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cta-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3xl);
+    }
+    
+    .cta-card {
+        padding: var(--space-3xl);
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .business-card.featured::before {
+        top: var(--space-sm);
+        left: var(--space-sm);
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+    
+    .business-status {
+        top: var(--space-sm);
+        right: var(--space-sm);
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+    
+    .favorite-btn {
+        bottom: var(--space-sm);
+        right: var(--space-sm);
+        width: 32px;
+        height: 32px;
+        font-size: var(--font-base);
+    }
 }
 
