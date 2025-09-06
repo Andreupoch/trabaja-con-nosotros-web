@@ -42,12 +42,12 @@
 }
 
 .cookie-text a {
-    color: #5197fc;
+    color: var(--color-primary);  /* Logo blue */
     text-decoration: underline;
 }
 
 .cookie-text a:hover {
-    color: #3a7bc8;
+    color: var(--color-primary-dark);  /* Darker blue on hover */
 }
 
 /* Cookie Options */

@@ -239,6 +239,42 @@
   flex-grow: 1;
 }
 
+/* Milestone Card */
+.milestone {
+  position: relative;
+  padding: var(--spacing-lg);
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.milestone .when {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+}
+
+.milestone-icon {
+  font-size: 2.5em;
+  vertical-align: -0.35em;
+  margin-right: 0.35em;
+  line-height: 1;
+}
+
+.milestone h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin: var(--spacing-xs) 0;
+}
+
+.milestone .desc {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .card-body {

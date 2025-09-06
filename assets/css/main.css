@@ -3173,6 +3173,42 @@ a:hover {
   flex-grow: 1;
 }
 
+/* Milestone Card */
+.milestone {
+  position: relative;
+  padding: var(--spacing-lg);
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.milestone .when {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+}
+
+.milestone-icon {
+  font-size: 2.5em;
+  vertical-align: -0.35em;
+  margin-right: 0.35em;
+  line-height: 1;
+}
+
+.milestone h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin: var(--spacing-xs) 0;
+}
+
+.milestone .desc {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .card-body {
@@ -3841,12 +3877,12 @@ footer {
 }
 
 .cookie-text a {
-    color: #5197fc;
+    color: var(--color-primary);  /* Logo blue */
     text-decoration: underline;
 }
 
 .cookie-text a:hover {
-    color: #3a7bc8;
+    color: var(--color-primary-dark);  /* Darker blue on hover */
 }
 
 /* Cookie Options */
@@ -4596,29 +4632,29 @@ footer {
 /* Color Palette */
 :root {
   /* Primary Colors */
-  --color-primary: #2563eb;  /* Logo blue */
-  --color-primary-rgb: 37, 99, 235;  /* Logo blue RGB */
-  --color-primary-dark: #1d4ed8;  /* Darker blue */
+  --color-primary: #13123a;
+  --color-primary-rgb: 19, 18, 58;
+  --color-primary-dark: #0d0c2e;
   --color-primary-light: #1e1d52;
   
   /* Secondary Colors */
-  --color-secondary: #06b6d4;  /* Logo teal */
-  --color-secondary-rgb: 6, 182, 212;  /* Logo teal RGB */
-  --color-secondary-dark: #0891b2;  /* Darker teal */
+  --color-secondary: #2e6bd1;
+  --color-secondary-rgb: 46, 107, 209;
+  --color-secondary-dark: #1a4fa8;
   --color-secondary-light: #5085dd;
   
   /* Text Colors */
   --color-text-primary: #333;
-  --color-text-secondary: #4b5563;  /* Gray-600, 7.0:1 contrast - WCAG AA compliant */
-  --color-text-light: #6b7280;      /* Gray-500, 4.6:1 contrast - WCAG AA compliant */
+  --color-text-secondary: #666;
+  --color-text-light: #999;
   --color-text-white: #fff;
   
   /* Background Colors */
   --color-bg-light: #f5f5f5;
   --color-bg-white: #fff;
   --color-bg-dark: var(--color-primary);
-  --color-bg-overlay: rgba(19, 18, 58, 0.90);  /* Increased opacity for better text readability */
-  --color-bg-overlay-light: rgba(19, 18, 58, 0.85); /* Improved contrast while maintaining visual appeal */
+  --color-bg-overlay: rgba(19, 18, 58, 0.80);
+  --color-bg-overlay-light: rgba(19, 18, 58, 0.60);
   
   /* Status Colors */
   --color-success: #28a745;
@@ -4717,7 +4753,7 @@ footer {
 
 :root {
   /* Colors Principals */
-  --primary-blue: #2563eb;  /* Logo blue */
+  --primary-blue: #13123a;
   --primary-blue-hover: #1e1b4b;
   --primary-blue-light: #3b3a8f;
   --secondary-blue: #2563eb;
@@ -8527,7 +8563,7 @@ footer {
 
 .cookie-text p {
     margin: 0 0 10px 0;
-    color: var(--color-text-secondary);
+    color: #666;
     line-height: 1.5;
 }
 
@@ -8606,7 +8642,7 @@ footer {
 
 .cookie-btn.cookie-decline {
     background: #f0f0f0;
-    color: var(--color-text-secondary);
+    color: #666;
     border: 1px solid #ddd;
 }
 
@@ -8733,7 +8769,7 @@ footer {
 /* Hero CTA Button - Critical Style */
 .hero .cta-primary {
   background: #f9d67d !important;
-  color: var(--color-primary) !important;
+  color: #13123a !important;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -8763,9 +8799,9 @@ footer {
   font-weight: 500;
 }
 
-.reasons-grid-custom .professional-card{background:var(--color-primary) !important;color:#fff !important} .reasons-grid-custom .professional-card h3, .reasons-grid-custom .professional-card .card-header p{color:#fff !important} /* White quote helper for dark cards */ .white-quote, .reasons-grid-custom .professional-card blockquote, .reasons-grid-custom .professional-card .quote{color:#fff !important} .full-bleed-white{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .reasons-grid-custom{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:1rem !important} .reasons-grid-custom .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:300px} } @media (max-width:768px){ /* Make the full-bleed container behave like normal width to avoid horizontal scroll */ .full-bleed-white{width:100%;left:0;right:0;margin-left:0;margin-right:0} /* Add a bit of horizontal padding on mobile for readability */ .full-bleed-white .container{padding:0 1rem !important} .reasons-grid-custom{grid-template-columns:1fr !important;gap:1rem !important} .reasons-grid-custom .professional-card{min-height:auto} .reasons-grid-custom .professional-card .card-header p{font-size:0.95rem} /* Hide scroll hint on larger screens only; show on mobile */ .scroll-hint{display:block} } @media (min-width:769px){.scroll-hint{display:none}} /* Ensure long content wraps nicely on narrow screens */ .reasons-grid-custom .professional-card{word-break:break-word}
+.reasons-grid-custom .professional-card{background:#13123a !important;color:#fff !important} .reasons-grid-custom .professional-card h3, .reasons-grid-custom .professional-card .card-header p{color:#fff !important} /* White quote helper for dark cards */ .white-quote, .reasons-grid-custom .professional-card blockquote, .reasons-grid-custom .professional-card .quote{color:#fff !important} .full-bleed-white{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .reasons-grid-custom{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:1rem !important} .reasons-grid-custom .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:300px} } @media (max-width:768px){ /* Make the full-bleed container behave like normal width to avoid horizontal scroll */ .full-bleed-white{width:100%;left:0;right:0;margin-left:0;margin-right:0} /* Add a bit of horizontal padding on mobile for readability */ .full-bleed-white .container{padding:0 1rem !important} .reasons-grid-custom{grid-template-columns:1fr !important;gap:1rem !important} .reasons-grid-custom .professional-card{min-height:auto} .reasons-grid-custom .professional-card .card-header p{font-size:0.95rem} /* Hide scroll hint on larger screens only; show on mobile */ .scroll-hint{display:block} } @media (min-width:769px){.scroll-hint{display:none}} /* Ensure long content wraps nicely on narrow screens */ .reasons-grid-custom .professional-card{word-break:break-word}
 @media (max-width: 1100px) { .reasons-grid-custom { grid-template-columns: 1fr 1fr !important; grid-template-rows: auto auto auto !important; gap: 1.5rem !important; } .professional-card { height: auto !important; min-height: 300px !important; } .reasons-grid-custom > div[style*='grid-column: 2 / 5'] { grid-column: 1 / 3 !important; height: 180px !important; } .reasons-grid-custom > div[style*='grid-column: 1 / 2'] { height: 180px !important; } } @media (max-width: 700px) { .reasons-grid-custom { grid-template-columns: 1fr !important; grid-template-rows: repeat(6, auto) !important; gap: 1rem !important; } .professional-card { height: auto !important; min-height: 250px !important; grid-column: 1 !important; } .reasons-grid-custom > div[style*='grid-column: 2 / 5'] { grid-column: 1 !important; height: auto !important; min-height: 200px !important; } .reasons-grid-custom > div[style*='grid-column: 1 / 2'] { height: auto !important; min-height: 200px !important; } }
-/* Avoid blue edge on the full-bleed white block and add gutters on mobile */ @media (max-width: 768px) { .full-bleed-white{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important;} .full-bleed-white .container{padding:0 1rem !important} /* Prevent page-wide horizontal scroll: make blue full-bleed section normal width on mobile */ section[style*="background:var(--color-primary)"][style*="width:100vw"]{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important;} }
+/* Avoid blue edge on the full-bleed white block and add gutters on mobile */ @media (max-width: 768px) { .full-bleed-white{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important;} .full-bleed-white .container{padding:0 1rem !important} /* Prevent page-wide horizontal scroll: make blue full-bleed section normal width on mobile */ section[style*="background:#13123a"][style*="width:100vw"]{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important;} }
 .icon-cell-row { display: inline-flex; /* permet icona + text en línia */ align-items: center; /* alinea verticalment */ justify-content: flex-start; gap: 0.4rem; /* espai entre icona i text */ } .icon-cell-icon { flex-shrink: 0; font-size: 1rem; /* mida homogènia de les icones */ line-height: 1; } .icon-cell-text { display: inline-block; text-align: left; }
 
 /* Features Section - Critical Layout Styles */
@@ -8801,13 +8837,13 @@ footer {
 }
 
 .feature-item h3 {
-  color: var(--color-primary);
+  color: #13123a;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
 .feature-item p {
-  color: var(--color-text-secondary);
+  color: #666;
   line-height: 1.6;
   font-size: 1.05rem;
 }
@@ -8845,12 +8881,12 @@ footer {
 }
 
 .audience-item h3 {
-  color: var(--color-primary);
+  color: #13123a;
   margin-bottom: 1rem;
 }
 
 .audience-item ul {
-  color: var(--color-text-secondary);
+  color: #666;
   line-height: 1.8;
 }
 
@@ -8876,7 +8912,7 @@ footer {
 }
 
 .comparison-table th {
-  background: var(--color-primary);
+  background: #13123a;
   color: #fff;
   padding: 1.2rem;
   text-align: left;
@@ -8899,7 +8935,7 @@ footer {
 /* Scroll hint for mobile */
 .scroll-hint {
   text-align: center;
-  color: var(--color-text-light);
+  color: #999;
   font-size: 0.9rem;
   margin-top: 1rem;
   display: none;
@@ -8938,12 +8974,12 @@ footer {
 .stat-card .stat-number {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--color-primary);
+  color: #13123a;
   margin-bottom: 0.5rem;
 }
 
 .stat-card .stat-label {
-  color: var(--color-text-secondary);
+  color: #666;
   font-size: 1.1rem;
 }
 
@@ -8976,7 +9012,7 @@ footer {
 
 .cta-section .cta-button {
   background: #f9d67d;
-  color: var(--color-primary);
+  color: #13123a;
   padding: 1rem 2.5rem;
   border-radius: 8px;
   text-decoration: none;
@@ -8992,12 +9028,12 @@ footer {
 }
 
 /* Extracted from es/index.html */
-.reasons-grid-custom .professional-card{background:var(--color-primary) !important;color:#fff !important} .reasons-grid-custom .professional-card h3, .reasons-grid-custom .professional-card .card-header p{color:#fff !important} /* White quote helper for dark cards */ .white-quote, .reasons-grid-custom .professional-card blockquote, .reasons-grid-custom .professional-card .quote{color:#fff !important} .full-bleed-white{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .reasons-grid-custom{grid-template-columns:repeat(2,1fr) !important;gap:1rem !important} .reasons-grid-custom .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:320px} } @media (max-width:768px){ /* Make the full-bleed container behave like normal width to avoid horizontal scroll */ .full-bleed-white{width:100%;left:0;right:0;margin-left:0;margin-right:0} /* Add a bit of horizontal padding on mobile for readability */ .full-bleed-white .container{padding:0 1rem !important} .reasons-grid-custom{grid-template-columns:1fr !important;gap:1rem !important} .reasons-grid-custom .professional-card{min-height:auto} .reasons-grid-custom .professional-card .card-header p{font-size:0.95rem} /* Show scroll hint only on mobile */ .scroll-hint{display:block} /* Prevent page-wide horizontal scroll from blue full-bleed section */ section[style*="background:var(--color-primary)"][style*="width:100vw"]{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important} } @media (min-width:769px){.scroll-hint{display:none}} /* Ensure long content wraps nicely on narrow screens */ .reasons-grid-custom .professional-card{word-break:break-word}
-.es-fixed .professional-card{background:var(--color-primary) !important;color:#fff !important} .es-fixed .professional-card h3, .es-fixed .professional-card .card-header p{color:#fff !important} .es-fixed .white-quote, .es-fixed .professional-card blockquote, .es-fixed .professional-card .quote{color:#fff !important} .es-fixed{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .es-fixed .reasons-grid-custom{grid-template-columns:repeat(2,1fr) !important;gap:1rem !important} .es-fixed .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:320px} } @media (max-width:768px){ .es-fixed{width:100%;left:0;right:0;margin-left:0;margin-right:0} .es-fixed .container{padding:0 1rem !important} .es-fixed .reasons-grid-custom{grid-template-columns:1fr !important;gap:1rem !important} .es-fixed .professional-card{min-height:auto} }
+.reasons-grid-custom .professional-card{background:#13123a !important;color:#fff !important} .reasons-grid-custom .professional-card h3, .reasons-grid-custom .professional-card .card-header p{color:#fff !important} /* White quote helper for dark cards */ .white-quote, .reasons-grid-custom .professional-card blockquote, .reasons-grid-custom .professional-card .quote{color:#fff !important} .full-bleed-white{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .reasons-grid-custom{grid-template-columns:repeat(2,1fr) !important;gap:1rem !important} .reasons-grid-custom .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:320px} } @media (max-width:768px){ /* Make the full-bleed container behave like normal width to avoid horizontal scroll */ .full-bleed-white{width:100%;left:0;right:0;margin-left:0;margin-right:0} /* Add a bit of horizontal padding on mobile for readability */ .full-bleed-white .container{padding:0 1rem !important} .reasons-grid-custom{grid-template-columns:1fr !important;gap:1rem !important} .reasons-grid-custom .professional-card{min-height:auto} .reasons-grid-custom .professional-card .card-header p{font-size:0.95rem} /* Show scroll hint only on mobile */ .scroll-hint{display:block} /* Prevent page-wide horizontal scroll from blue full-bleed section */ section[style*="background:#13123a"][style*="width:100vw"]{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important} } @media (min-width:769px){.scroll-hint{display:none}} /* Ensure long content wraps nicely on narrow screens */ .reasons-grid-custom .professional-card{word-break:break-word}
+.es-fixed .professional-card{background:#13123a !important;color:#fff !important} .es-fixed .professional-card h3, .es-fixed .professional-card .card-header p{color:#fff !important} .es-fixed .white-quote, .es-fixed .professional-card blockquote, .es-fixed .professional-card .quote{color:#fff !important} .es-fixed{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .es-fixed .reasons-grid-custom{grid-template-columns:repeat(2,1fr) !important;gap:1rem !important} .es-fixed .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:320px} } @media (max-width:768px){ .es-fixed{width:100%;left:0;right:0;margin-left:0;margin-right:0} .es-fixed .container{padding:0 1rem !important} .es-fixed .reasons-grid-custom{grid-template-columns:1fr !important;gap:1rem !important} .es-fixed .professional-card{min-height:auto} }
 .icon-cell-row { display: inline-flex; /* permite icono + texto en línea */ align-items: center; /* alineación vertical */ justify-content: flex-start; gap: 0.4rem; /* espacio entre icono y texto */ } .icon-cell-icon { flex-shrink: 0; font-size: 1rem; /* tamaño homogéneo de los iconos */ line-height: 1; } .icon-cell-text { display: inline-block; text-align: left; }
 
 /* Extracted from en/index.html */
-.reasons-grid-custom .professional-card{background:var(--color-primary) !important;color:#fff !important} .reasons-grid-custom .professional-card h3, .reasons-grid-custom .professional-card .card-header p{color:#fff !important} /* White quote helper for dark cards */ .white-quote, .reasons-grid-custom .professional-card blockquote, .reasons-grid-custom .professional-card .quote{color:#fff !important} .full-bleed-white{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .reasons-grid-custom{grid-template-columns:repeat(2,1fr) !important;gap:1rem !important} .reasons-grid-custom .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:320px} } @media (max-width:768px){ /* Make full-bleed behave like normal width on mobile and add gutters */ .full-bleed-white{width:100%;left:0;right:0;margin-left:0;margin-right:0} .full-bleed-white .container{padding:0 1rem !important} .reasons-grid-custom{grid-template-columns:1fr !important} /* Show scroll hint only on mobile */ .scroll-hint{display:block} /* Prevent page-wide horizontal scroll from blue full-bleed section */ section[style*="background:var(--color-primary)"][style*="width:100vw"]{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important} } @media (min-width:769px){.scroll-hint{display:none}} /* Prevent overflows with long content */ .reasons-grid-custom .professional-card{word-break:break-word}
+.reasons-grid-custom .professional-card{background:#13123a !important;color:#fff !important} .reasons-grid-custom .professional-card h3, .reasons-grid-custom .professional-card .card-header p{color:#fff !important} /* White quote helper for dark cards */ .white-quote, .reasons-grid-custom .professional-card blockquote, .reasons-grid-custom .professional-card .quote{color:#fff !important} .full-bleed-white{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .reasons-grid-custom{grid-template-columns:repeat(2,1fr) !important;gap:1rem !important} .reasons-grid-custom .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:320px} } @media (max-width:768px){ /* Make full-bleed behave like normal width on mobile and add gutters */ .full-bleed-white{width:100%;left:0;right:0;margin-left:0;margin-right:0} .full-bleed-white .container{padding:0 1rem !important} .reasons-grid-custom{grid-template-columns:1fr !important} /* Show scroll hint only on mobile */ .scroll-hint{display:block} /* Prevent page-wide horizontal scroll from blue full-bleed section */ section[style*="background:#13123a"][style*="width:100vw"]{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important} } @media (min-width:769px){.scroll-hint{display:none}} /* Prevent overflows with long content */ .reasons-grid-custom .professional-card{word-break:break-word}
 @media (max-width: 1100px) { .reasons-grid-custom { grid-template-columns: 1fr 1fr !important; grid-template-rows: auto auto auto !important; gap: 1.5rem !important; } .professional-card { height: auto !important; min-height: 300px !important; } .reasons-grid-custom > div[style*='grid-column: 2 / 5'] { grid-column: 1 / 3 !important; height: 180px !important; } .reasons-grid-custom > div[style*='grid-column: 1 / 2'] { height: 180px !important; } } @media (max-width: 700px) { .reasons-grid-custom { grid-template-columns: 1fr !important; grid-template-rows: repeat(6, auto) !important; gap: 1rem !important; } .professional-card { height: auto !important; min-height: 250px !important; grid-column: 1 !important; } .reasons-grid-custom > div[style*='grid-column: 2 / 5'] { grid-column: 1 !important; height: auto !important; min-height: 200px !important; } .reasons-grid-custom > div[style*='grid-column: 1 / 2'] { height: auto !important; min-height: 200px !important; } }
 .icon-cell-row { display: inline-flex; /* allows icon + text inline */ align-items: center; /* vertical alignment */ justify-content: flex-start; gap: 0.4rem; /* space between icon and text */ } .icon-cell-icon { flex-shrink: 0; font-size: 1rem; /* uniform icon size */ line-height: 1; } .icon-cell-text { display: inline-block; text-align: left; }
 
@@ -9146,7 +9182,7 @@ footer {
 
 .pricing-card.featured .badge {
   background: #f9d67d;
-  color: var(--color-primary);
+  color: #13123a;
   position: absolute;
   top: -15px;
   right: 30px;
@@ -9159,14 +9195,14 @@ footer {
 /* Pricing Header */
 .pricing-card h3 {
   font-size: 1.5rem;
-  color: var(--color-primary);
+  color: #13123a;
   margin-bottom: 0.5rem;
 }
 
 .price-amount {
   font-size: 3rem;
   font-weight: bold;
-  color: var(--color-primary);
+  color: #13123a;
   display: inline-block;
 }
 
@@ -9210,7 +9246,7 @@ footer {
   text-decoration: none;
   display: block;
   transition: all 0.3s;
-  background: var(--color-primary);
+  background: #13123a;
   color: #fff;
 }
 
@@ -9221,7 +9257,7 @@ footer {
 
 .pricing-card.featured .cta-button {
   background: #f9d67d;
-  color: var(--color-primary);
+  color: #13123a;
 }
 
 .pricing-card.featured .cta-button:hover {
@@ -9244,7 +9280,7 @@ footer {
 }
 
 .faq-item h4 {
-  color: var(--color-primary);
+  color: #13123a;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -9266,7 +9302,7 @@ footer {
 }
 
 .comparison-table th {
-  background: var(--color-primary);
+  background: #13123a;
   color: #fff;
   padding: 1.2rem;
   text-align: left;
@@ -9944,7 +9980,7 @@ footer {
 }
 
 .regio-estadistica {
-  color: var(--color-text-secondary);
+  color: #666;
   font-size: 0.9rem;
   text-align: right;
 }
@@ -9958,7 +9994,7 @@ footer {
 .seccio-subtitol {
   text-align: center;
   font-size: 1.3rem;
-  color: var(--color-text-secondary);
+  color: #666;
   margin-bottom: 3rem;
 }
 
@@ -10092,7 +10128,7 @@ footer {
 .mentor-informacio {
   display: block;
   font-size: 0.85rem;
-  color: var(--color-text-secondary);
+  color: #666;
 }
 
 .mentor-mes {
@@ -10278,7 +10314,7 @@ footer {
 }
 
 .historia-ubicacio {
-  color: var(--color-text-secondary);
+  color: #666;
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
@@ -10352,7 +10388,7 @@ footer {
 }
 
 .soci-targeta p {
-  color: var(--color-text-secondary);
+  color: #666;
   font-size: 0.9rem;
 }
 
@@ -10473,7 +10509,7 @@ footer {
 }
 
 .pmf-element p {
-  color: var(--color-text-secondary);
+  color: #666;
   line-height: 1.6;
 }
 
@@ -12771,7 +12807,7 @@ footer {
 /* Citations */
 .citation-number {
   font-weight: 500;
-  color: var(--color-primary);
+  color: #13123a;
   display: inline-block;
   min-width: 2rem;
   margin-right: 0.5rem;
@@ -13142,556 +13178,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .benvinguda-titol {
-    font-size: 1.8rem;
-  }
-  
-  .hero-subtitol {
-    font-size: 1.1rem;
-  }
-  
-  .estadistica-destacada {
-    min-width: 240px;
-  }
-}/* ============================================
-   Hero Nova - Disseny millorat per la home
-   ============================================ */
-
-/* Colors del logo */
-:root {
-  --logo-t-color: #2e6bd1; /* Blau del logo */
-  --logo-n-color: #28a745; /* Verd del logo */
-  --hero-gradient: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-}
-
-/* Hero section nova */
-.hero-nova {
-  background: var(--hero-gradient);
-  padding: 4rem 2rem 3rem;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Benvinguda section */
-.hero-benvinguda {
-  margin-bottom: 3rem;
-}
-
-.logo-principal {
-  margin-bottom: 2rem;
-  font-size: 4rem;
-  opacity: 0.1;
-  /* Aquí es pot afegir el logo real */
-}
-
-.benvinguda-titol {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-  letter-spacing: -0.02em;
-}
-
-.logo-t-color {
-  color: #4A90E2 !important;
-  font-weight: 800;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.logo-n-color {
-  color: #27AE60 !important;
-  font-weight: 800;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.hero-subtitol {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: #ffffff;
-  opacity: 0.95;
-  margin-bottom: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-/* Banner d'alerta */
-.crisi-alert-banner {
-  background: #e74c3c;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 2rem auto;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
-}
-
-.alert-icon {
-  font-size: 1.2rem;
-}
-
-/* Estadístiques principals */
-.estadistiques-principals {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin: 3rem 0;
-  flex-wrap: wrap;
-}
-
-.estadistica-destacada {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
-  min-width: 280px;
-  transition: all 0.3s ease;
-}
-
-.estadistica-destacada:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.numero-gran {
-  display: block;
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #ff6b6b;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  margin-bottom: 0.5rem;
-}
-
-.descripcio {
-  display: block;
-  font-size: 1rem;
-  opacity: 0.9;
-  line-height: 1.4;
-  font-weight: 500;
-}
-
-/* Crida a l'acció */
-.crida-accio {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 600;
-  margin: 3rem 0 2rem;
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-  line-height: 1.3;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .hero-nova {
-    padding: 3rem 1rem 2rem;
-  }
-  
-  .estadistiques-principals {
-    gap: 1.5rem;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .estadistica-destacada {
-    min-width: 260px;
-    padding: 1.5rem 1rem;
-  }
-  
-  .numero-gran {
-    font-size: 2.8rem;
-  }
-  
-  .crisi-alert-banner {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .benvinguda-titol {
-    font-size: 1.8rem;
-  }
-  
-  .hero-subtitol {
-    font-size: 1.1rem;
-  }
-  
-  .estadistica-destacada {
-    min-width: 240px;
-  }
-}/* ============================================
-   Hero Nova - Disseny millorat per la home
-   ============================================ */
-
-/* Colors del logo */
-:root {
-  --logo-t-color: #2e6bd1; /* Blau del logo */
-  --logo-n-color: #28a745; /* Verd del logo */
-  --hero-gradient: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-}
-
-/* Hero section nova */
-.hero-nova {
-  background: var(--hero-gradient);
-  padding: 4rem 2rem 3rem;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Benvinguda section */
-.hero-benvinguda {
-  margin-bottom: 3rem;
-}
-
-.logo-principal {
-  margin-bottom: 2rem;
-  font-size: 4rem;
-  opacity: 0.1;
-  /* Aquí es pot afegir el logo real */
-}
-
-.benvinguda-titol {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  color: #ffffff !important;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
-  letter-spacing: -0.02em;
-}
-
-.logo-t-color {
-  color: #5BA3F5 !important;
-  font-weight: 900;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 1), 0 0 15px rgba(91, 163, 245, 0.3);
-}
-
-.logo-n-color {
-  color: #2ECC71 !important;
-  font-weight: 900;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 1), 0 0 15px rgba(46, 204, 113, 0.3);
-}
-
-.hero-subtitol {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #ffffff !important;
-  opacity: 1;
-  margin-bottom: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9);
-}
-
-/* Banner d'alerta */
-.crisi-alert-banner {
-  background: #e74c3c;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 2rem auto;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
-}
-
-.alert-icon {
-  font-size: 1.2rem;
-}
-
-/* Estadístiques principals */
-.estadistiques-principals {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin: 3rem 0;
-  flex-wrap: wrap;
-}
-
-.estadistica-destacada {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
-  min-width: 280px;
-  transition: all 0.3s ease;
-}
-
-.estadistica-destacada:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.numero-gran {
-  display: block;
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: #FF5757 !important;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 87, 87, 0.3);
-  margin-bottom: 0.5rem;
-}
-
-.descripcio {
-  display: block;
-  font-size: 1rem;
-  opacity: 1;
-  line-height: 1.4;
-  font-weight: 600;
-  color: #ffffff !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
-}
-
-/* Crida a l'acció */
-.crida-accio {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 700;
-  margin: 3rem 0 2rem;
-  color: #ffffff !important;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
-  line-height: 1.3;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-  padding-bottom: 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .hero-nova {
-    padding: 3rem 1rem 2rem;
-  }
-  
-  .estadistiques-principals {
-    gap: 1.5rem;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .estadistica-destacada {
-    min-width: 260px;
-    padding: 1.5rem 1rem;
-  }
-  
-  .numero-gran {
-    font-size: 2.8rem;
-  }
-  
-  .crisi-alert-banner {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .benvinguda-titol {
-    font-size: 1.8rem;
-  }
-  
-  .hero-subtitol {
-    font-size: 1.1rem;
-  }
-  
-  .estadistica-destacada {
-    min-width: 240px;
-  }
-}/* ============================================
-   Hero Nova - Disseny millorat per la home
-   ============================================ */
-
-/* Colors del logo */
-:root {
-  --logo-t-color: #2e6bd1; /* Blau del logo */
-  --logo-n-color: #28a745; /* Verd del logo */
-  --hero-gradient: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-}
-
-/* Hero section nova */
-.hero-nova {
-  background: var(--hero-gradient);
-  padding: 4rem 2rem 3rem;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Benvinguda section */
-.hero-benvinguda {
-  margin-bottom: 3rem;
-}
-
-.logo-principal {
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-hero-image {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.7));
-}
-
-.benvinguda-titol {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  color: #ffffff !important;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
-  letter-spacing: -0.02em;
-}
-
-.logo-t-color {
-  color: #5BA3F5 !important;
-  font-weight: 900;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 1), 0 0 15px rgba(91, 163, 245, 0.3);
-}
-
-.logo-n-color {
-  color: #2ECC71 !important;
-  font-weight: 900;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 1), 0 0 15px rgba(46, 204, 113, 0.3);
-}
-
-.hero-subtitol {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #ffffff !important;
-  opacity: 1;
-  margin-bottom: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9);
-}
-
-/* Banner d'alerta */
-.crisi-alert-banner {
-  background: #e74c3c;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 2rem auto;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
-}
-
-.alert-icon {
-  font-size: 1.2rem;
-}
-
-/* Estadístiques principals */
-.estadistiques-principals {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin: 3rem 0;
-  flex-wrap: wrap;
-}
-
-.estadistica-destacada {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
-  min-width: 280px;
-  transition: all 0.3s ease;
-}
-
-.estadistica-destacada:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.numero-gran {
-  display: block;
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: #FF5757 !important;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 87, 87, 0.3);
-  margin-bottom: 0.5rem;
-}
-
-.descripcio {
-  display: block;
-  font-size: 1rem;
-  opacity: 1;
-  line-height: 1.4;
-  font-weight: 600;
-  color: #ffffff !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
-}
-
-/* Crida a l'acció */
-.crida-accio {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 700;
-  margin: 3rem 0 2rem;
-  color: #ffffff !important;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
-  line-height: 1.3;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-  padding-bottom: 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .hero-nova {
-    padding: 3rem 1rem 2rem;
-  }
-  
-  .logo-hero-image {
-    max-width: 250px;
-  }
-  
-  .estadistiques-principals {
-    gap: 1.5rem;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .estadistica-destacada {
-    min-width: 260px;
-    padding: 1.5rem 1rem;
-  }
-  
-  .numero-gran {
-    font-size: 2.8rem;
-  }
-  
-  .crisi-alert-banner {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-hero-image {
-    max-width: 200px;
-  }
-  
   .benvinguda-titol {
     font-size: 1.8rem;
   }
