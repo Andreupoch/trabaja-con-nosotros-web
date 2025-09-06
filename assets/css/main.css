@@ -4639,6 +4639,155 @@ ${getFullCSS()}
 }
 
 
+/* ============ 03-FIXES-URGENTS.CSS ============ */
+/* ====================================
+   03-FIXES-URGENTS.CSS
+   Fixes crítics per arreglar problemes visuals
+   ==================================== */
+
+/* 1. FONS BLANC PER DEFECTE */
+html {
+  background-color: #ffffff !important;
+}
+
+body {
+  background-color: #ffffff !important;
+  min-height: 100vh;
+}
+
+/* 2. COLORS DEL MENÚ DESPLEGABLE */
+.dropdown-menu {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.dropdown-menu a {
+  color: #1f2937 !important; /* Text fosc sobre fons blanc */
+  padding: 0.5rem 1rem !important;
+  display: block !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f3f4f6 !important;
+  color: #111827 !important;
+}
+
+/* 3. MENÚ ACTIU - Millor contrast */
+.nav-link.active {
+  background-color: #1e40af !important; /* Blau més clar que el fosc actual */
+  color: #ffffff !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Fix pel dropdown actiu */
+.dropdown.active > .nav-link {
+  background-color: #1e40af !important;
+  color: #ffffff !important;
+}
+
+/* 4. MOBILE MENU - Fons blanc */
+.nav-links.active {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Mobile menu items */
+@media (max-width: 768px) {
+  .nav-links {
+    background-color: #ffffff !important;
+  }
+  
+  .nav-link {
+    color: #1f2937 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+  }
+  
+  .nav-link:hover {
+    background-color: #f3f4f6 !important;
+  }
+  
+  .nav-link.active {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+  }
+}
+
+/* 5. HERO SECTION - Mantenir el gradient però més suau */
+.hero-nova {
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%) !important;
+}
+
+/* 6. SECCIONS - Assegurar fons blanc */
+.section,
+section {
+  background-color: #ffffff !important;
+}
+
+/* Seccions alternatives amb fons gris molt suau */
+.section:nth-child(even),
+section:nth-child(even) {
+  background-color: #fafafa !important;
+}
+
+/* 7. CARDS I COMPONENTS - Fons blanc */
+.card {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+/* 8. ESTADÍSTIQUES - Millor contrast */
+.stat-card {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 9. PROGRAMES - Mantenir colors però amb millor contrast */
+.hero-programa {
+  position: relative;
+}
+
+.hero-programa::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+/* 10. FOOTER - Mantenir el seu color però assegurar llegibilitat */
+footer {
+  background-color: #111827 !important;
+  color: #f9fafb !important;
+}
+
+footer a {
+  color: #d1d5db !important;
+}
+
+footer a:hover {
+  color: #ffffff !important;
+}
+
+/* 11. ELIMINAR QUALSEVOL FONS GRIS RESIDUAL */
+.bg-gray-50,
+.bg-gray-100,
+.bg-gray-200 {
+  background-color: #ffffff !important;
+}
+
+/* Variables override per assegurar blancs */
+:root {
+  --bg-body: #ffffff !important;
+  --bg-surface: #ffffff !important;
+  --bg-gray-50: #fafafa !important; /* Gris molt suau en lloc de fosc */
+  --bg-gray-100: #f5f5f5 !important;
+}
+
+
 /* ============ PROGRAMES-EMERGENCIA.CSS ============ */
 /* Programes d'Emergència Sectorial - Estils */
 
