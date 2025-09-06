@@ -904,6 +904,19 @@
 .max-w-container { max-width: 1280px; }
 .mx-auto { margin-left: auto; margin-right: auto; }
 
+/* Form Success Messages */
+.form-success {
+  display: none;
+  margin-top: 12px;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.form-success.show {
+  display: block;
+}
+
 /* ===========================
    RESPONSIVE UTILITIES
    =========================== */
