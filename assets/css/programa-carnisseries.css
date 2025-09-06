@@ -213,7 +213,7 @@
 }
 
 .regio-estadistica {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   text-align: right;
 }
@@ -227,7 +227,7 @@
 .seccio-subtitol {
   text-align: center;
   font-size: 1.3rem;
-  color: #666;
+  color: var(--color-text-secondary);
   margin-bottom: 3rem;
 }
 
@@ -361,7 +361,7 @@
 .mentor-informacio {
   display: block;
   font-size: 0.85rem;
-  color: #666;
+  color: var(--color-text-secondary);
 }
 
 .mentor-mes {
@@ -547,7 +547,7 @@
 }
 
 .historia-ubicacio {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
@@ -621,7 +621,7 @@
 }
 
 .soci-targeta p {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
 }
 
@@ -742,7 +742,7 @@
 }
 
 .pmf-element p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 

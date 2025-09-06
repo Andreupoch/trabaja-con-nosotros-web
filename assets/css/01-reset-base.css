@@ -439,7 +439,7 @@ svg {
   }
   
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid var(--color-text-light);
     page-break-inside: avoid;
   }
   

@@ -115,7 +115,7 @@
 }
 
 .feature-item p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
   font-size: 1.05rem;
 }
@@ -158,7 +158,7 @@
 }
 
 .audience-item ul {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.8;
 }
 
@@ -207,7 +207,7 @@
 /* Scroll hint for mobile */
 .scroll-hint {
   text-align: center;
-  color: #999;
+  color: var(--color-text-light);
   font-size: 0.9rem;
   margin-top: 1rem;
   display: none;
@@ -251,7 +251,7 @@
 }
 
 .stat-card .stat-label {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 1.1rem;
 }
 

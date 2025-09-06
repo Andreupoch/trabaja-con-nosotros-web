@@ -37,7 +37,7 @@
 
 .cookie-text p {
     margin: 0 0 10px 0;
-    color: #666;
+    color: var(--color-text-secondary);
     line-height: 1.5;
 }
 
@@ -116,7 +116,7 @@
 
 .cookie-btn.cookie-decline {
     background: #f0f0f0;
-    color: #666;
+    color: var(--color-text-secondary);
     border: 1px solid #ddd;
 }
 

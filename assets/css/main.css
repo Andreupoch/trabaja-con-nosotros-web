@@ -28,16 +28,16 @@
   
   /* Text Colors */
   --color-text-primary: #333;
-  --color-text-secondary: #666;
-  --color-text-light: #999;
+  --color-text-secondary: #4b5563;  /* Gray-600, 7.0:1 contrast - WCAG AA compliant */
+  --color-text-light: #6b7280;      /* Gray-500, 4.6:1 contrast - WCAG AA compliant */
   --color-text-white: #fff;
   
   /* Background Colors */
   --color-bg-light: #f5f5f5;
   --color-bg-white: #fff;
   --color-bg-dark: var(--color-primary);
-  --color-bg-overlay: rgba(19, 18, 58, 0.80);
-  --color-bg-overlay-light: rgba(19, 18, 58, 0.60);
+  --color-bg-overlay: rgba(19, 18, 58, 0.90);  /* Increased opacity for better text readability */
+  --color-bg-overlay-light: rgba(19, 18, 58, 0.85); /* Improved contrast while maintaining visual appeal */
   
   /* Status Colors */
   --color-success: #28a745;
@@ -3831,7 +3831,7 @@ footer {
 
 .cookie-text p {
     margin: 0 0 10px 0;
-    color: #666;
+    color: var(--color-text-secondary);
     line-height: 1.5;
 }
 
@@ -3910,7 +3910,7 @@ footer {
 
 .cookie-btn.cookie-decline {
     background: #f0f0f0;
-    color: #666;
+    color: var(--color-text-secondary);
     border: 1px solid #ddd;
 }
 
@@ -4604,8 +4604,8 @@ footer {
   
   /* Text Colors */
   --color-text-primary: #333;
-  --color-text-secondary: #666;
-  --color-text-light: #999;
+  --color-text-secondary: #4b5563;  /* Gray-600, 7.0:1 contrast - WCAG AA compliant */
+  --color-text-light: #6b7280;      /* Gray-500, 4.6:1 contrast - WCAG AA compliant */
   --color-text-white: #fff;
   
   /* Background Colors */
@@ -8522,7 +8522,7 @@ footer {
 
 .cookie-text p {
     margin: 0 0 10px 0;
-    color: #666;
+    color: var(--color-text-secondary);
     line-height: 1.5;
 }
 
@@ -8601,7 +8601,7 @@ footer {
 
 .cookie-btn.cookie-decline {
     background: #f0f0f0;
-    color: #666;
+    color: var(--color-text-secondary);
     border: 1px solid #ddd;
 }
 
@@ -8802,7 +8802,7 @@ footer {
 }
 
 .feature-item p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
   font-size: 1.05rem;
 }
@@ -8845,7 +8845,7 @@ footer {
 }
 
 .audience-item ul {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.8;
 }
 
@@ -8894,7 +8894,7 @@ footer {
 /* Scroll hint for mobile */
 .scroll-hint {
   text-align: center;
-  color: #999;
+  color: var(--color-text-light);
   font-size: 0.9rem;
   margin-top: 1rem;
   display: none;
@@ -8938,7 +8938,7 @@ footer {
 }
 
 .stat-card .stat-label {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 1.1rem;
 }
 
@@ -9939,7 +9939,7 @@ footer {
 }
 
 .regio-estadistica {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   text-align: right;
 }
@@ -9953,7 +9953,7 @@ footer {
 .seccio-subtitol {
   text-align: center;
   font-size: 1.3rem;
-  color: #666;
+  color: var(--color-text-secondary);
   margin-bottom: 3rem;
 }
 
@@ -10087,7 +10087,7 @@ footer {
 .mentor-informacio {
   display: block;
   font-size: 0.85rem;
-  color: #666;
+  color: var(--color-text-secondary);
 }
 
 .mentor-mes {
@@ -10273,7 +10273,7 @@ footer {
 }
 
 .historia-ubicacio {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
@@ -10347,7 +10347,7 @@ footer {
 }
 
 .soci-targeta p {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
 }
 
@@ -10468,7 +10468,7 @@ footer {
 }
 
 .pmf-element p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
@@ -13325,6 +13325,379 @@ footer {
   .estadistica-destacada {
     min-width: 240px;
   }
+}/* ============================================
+   Hero Nova - Disseny millorat per la home
+   ============================================ */
+
+/* Colors del logo */
+:root {
+  --logo-t-color: #2e6bd1; /* Blau del logo */
+  --logo-n-color: #28a745; /* Verd del logo */
+  --hero-gradient: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+/* Hero section nova */
+.hero-nova {
+  background: var(--hero-gradient);
+  padding: 4rem 2rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Benvinguda section */
+.hero-benvinguda {
+  margin-bottom: 3rem;
+}
+
+.logo-principal {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  opacity: 0.1;
+  /* Aquí es pot afegir el logo real */
+}
+
+.benvinguda-titol {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #ffffff !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.02em;
+}
+
+.logo-t-color {
+  color: #5BA3F5 !important;
+  font-weight: 900;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 1), 0 0 15px rgba(91, 163, 245, 0.3);
+}
+
+.logo-n-color {
+  color: #2ECC71 !important;
+  font-weight: 900;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 1), 0 0 15px rgba(46, 204, 113, 0.3);
+}
+
+.hero-subtitol {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  opacity: 1;
+  margin-bottom: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* Banner d'alerta */
+.crisi-alert-banner {
+  background: #e74c3c;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem auto;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.alert-icon {
+  font-size: 1.2rem;
+}
+
+/* Estadístiques principals */
+.estadistiques-principals {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.estadistica-destacada {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  min-width: 280px;
+  transition: all 0.3s ease;
+}
+
+.estadistica-destacada:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.numero-gran {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #FF5757 !important;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 87, 87, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.descripcio {
+  display: block;
+  font-size: 1rem;
+  opacity: 1;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #ffffff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Crida a l'acció */
+.crida-accio {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin: 3rem 0 2rem;
+  color: #ffffff !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
+  line-height: 1.3;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-nova {
+    padding: 3rem 1rem 2rem;
+  }
+  
+  .estadistiques-principals {
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .estadistica-destacada {
+    min-width: 260px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .numero-gran {
+    font-size: 2.8rem;
+  }
+  
+  .crisi-alert-banner {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .benvinguda-titol {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitol {
+    font-size: 1.1rem;
+  }
+  
+  .estadistica-destacada {
+    min-width: 240px;
+  }
+}/* ============================================
+   Hero Nova - Disseny millorat per la home
+   ============================================ */
+
+/* Colors del logo */
+:root {
+  --logo-t-color: #2e6bd1; /* Blau del logo */
+  --logo-n-color: #28a745; /* Verd del logo */
+  --hero-gradient: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+/* Hero section nova */
+.hero-nova {
+  background: var(--hero-gradient);
+  padding: 4rem 2rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Benvinguda section */
+.hero-benvinguda {
+  margin-bottom: 3rem;
+}
+
+.logo-principal {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-hero-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.7));
+}
+
+.benvinguda-titol {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #ffffff !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.02em;
+}
+
+.logo-t-color {
+  color: #5BA3F5 !important;
+  font-weight: 900;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 1), 0 0 15px rgba(91, 163, 245, 0.3);
+}
+
+.logo-n-color {
+  color: #2ECC71 !important;
+  font-weight: 900;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 1), 0 0 15px rgba(46, 204, 113, 0.3);
+}
+
+.hero-subtitol {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  opacity: 1;
+  margin-bottom: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* Banner d'alerta */
+.crisi-alert-banner {
+  background: #e74c3c;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem auto;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.alert-icon {
+  font-size: 1.2rem;
+}
+
+/* Estadístiques principals */
+.estadistiques-principals {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.estadistica-destacada {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  min-width: 280px;
+  transition: all 0.3s ease;
+}
+
+.estadistica-destacada:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.numero-gran {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #FF5757 !important;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 87, 87, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.descripcio {
+  display: block;
+  font-size: 1rem;
+  opacity: 1;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #ffffff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Crida a l'acció */
+.crida-accio {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin: 3rem 0 2rem;
+  color: #ffffff !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
+  line-height: 1.3;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-nova {
+    padding: 3rem 1rem 2rem;
+  }
+  
+  .logo-hero-image {
+    max-width: 250px;
+  }
+  
+  .estadistiques-principals {
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .estadistica-destacada {
+    min-width: 260px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .numero-gran {
+    font-size: 2.8rem;
+  }
+  
+  .crisi-alert-banner {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-hero-image {
+    max-width: 200px;
+  }
+  
+  .benvinguda-titol {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitol {
+    font-size: 1.1rem;
+  }
+  
+  .estadistica-destacada {
+    min-width: 240px;
+  }
 }
 
 
@@ -13446,7 +13819,7 @@ footer {
 }
 
 .feature-item p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
   font-size: 1.05rem;
 }
@@ -13489,7 +13862,7 @@ footer {
 }
 
 .audience-item ul {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.8;
 }
 
@@ -13538,7 +13911,7 @@ footer {
 /* Scroll hint for mobile */
 .scroll-hint {
   text-align: center;
-  color: #999;
+  color: var(--color-text-light);
   font-size: 0.9rem;
   margin-top: 1rem;
   display: none;
@@ -13582,7 +13955,7 @@ footer {
 }
 
 .stat-card .stat-label {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 1.1rem;
 }
 
@@ -16111,7 +16484,7 @@ ${getFullCSS()}
 }
 
 .regio-estadistica {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   text-align: right;
 }
@@ -16125,7 +16498,7 @@ ${getFullCSS()}
 .seccio-subtitol {
   text-align: center;
   font-size: 1.3rem;
-  color: #666;
+  color: var(--color-text-secondary);
   margin-bottom: 3rem;
 }
 
@@ -16259,7 +16632,7 @@ ${getFullCSS()}
 .mentor-informacio {
   display: block;
   font-size: 0.85rem;
-  color: #666;
+  color: var(--color-text-secondary);
 }
 
 .mentor-mes {
@@ -16445,7 +16818,7 @@ ${getFullCSS()}
 }
 
 .historia-ubicacio {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
@@ -16519,7 +16892,7 @@ ${getFullCSS()}
 }
 
 .soci-targeta p {
-  color: #666;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
 }
 
@@ -16640,7 +17013,7 @@ ${getFullCSS()}
 }
 
 .pmf-element p {
-  color: #666;
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
@@ -18875,40 +19248,47 @@ ${getFullCSS()}
 
 .logo-principal {
   margin-bottom: 2rem;
-  font-size: 4rem;
-  opacity: 0.1;
-  /* Aquí es pot afegir el logo real */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-hero-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.7));
 }
 
 .benvinguda-titol {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 1rem;
   line-height: 1.2;
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  color: #ffffff !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
   letter-spacing: -0.02em;
 }
 
 .logo-t-color {
-  color: #4A90E2 !important;
-  font-weight: 800;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  color: #5BA3F5 !important;
+  font-weight: 900;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 1), 0 0 15px rgba(91, 163, 245, 0.3);
 }
 
 .logo-n-color {
-  color: #27AE60 !important;
-  font-weight: 800;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  color: #2ECC71 !important;
+  font-weight: 900;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 1), 0 0 15px rgba(46, 204, 113, 0.3);
 }
 
 .hero-subtitol {
   font-size: 1.25rem;
-  font-weight: 500;
-  color: #ffffff;
-  opacity: 0.95;
+  font-weight: 600;
+  color: #ffffff !important;
+  opacity: 1;
   margin-bottom: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 /* Banner d'alerta */
@@ -18961,29 +19341,31 @@ ${getFullCSS()}
 .numero-gran {
   display: block;
   font-size: 3.5rem;
-  font-weight: 800;
-  color: #ff6b6b;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 900;
+  color: #FF5757 !important;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 87, 87, 0.3);
   margin-bottom: 0.5rem;
 }
 
 .descripcio {
   display: block;
   font-size: 1rem;
-  opacity: 0.9;
+  opacity: 1;
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: 600;
+  color: #ffffff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 /* Crida a l'acció */
 .crida-accio {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 600;
+  font-weight: 700;
   margin: 3rem 0 2rem;
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  color: #ffffff !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
   line-height: 1.3;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
   padding-bottom: 1rem;
 }
 
@@ -18991,6 +19373,10 @@ ${getFullCSS()}
 @media (max-width: 768px) {
   .hero-nova {
     padding: 3rem 1rem 2rem;
+  }
+  
+  .logo-hero-image {
+    max-width: 250px;
   }
   
   .estadistiques-principals {
@@ -19015,6 +19401,10 @@ ${getFullCSS()}
 }
 
 @media (max-width: 480px) {
+  .logo-hero-image {
+    max-width: 200px;
+  }
+  
   .benvinguda-titol {
     font-size: 1.8rem;
   }
@@ -20723,7 +21113,7 @@ svg {
   }
   
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid var(--color-text-light);
     page-break-inside: avoid;
   }
   
