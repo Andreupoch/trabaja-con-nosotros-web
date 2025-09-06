@@ -4834,6 +4834,32 @@ main,
   background-color: #ffffff !important;
 }
 
+/* 14. DATA-DRIVEN BAR CHARTS (replaces inline style="height:X%") */
+/* Use custom properties set via data attributes for dynamic heights */
+.timeline-bars .bar {
+  /* Height will be set via custom property */
+  height: var(--bar-height, 0);
+  transition: height 0.3s ease;
+}
+
+/* Map data-height attributes to CSS custom properties */
+.bar[data-height="5"] { --bar-height: 5%; }
+.bar[data-height="3"] { --bar-height: 3%; }
+.bar[data-height="2"] { --bar-height: 2%; }
+.bar[data-height="25"] { --bar-height: 25%; }
+.bar[data-height="20"] { --bar-height: 20%; }
+.bar[data-height="18"] { --bar-height: 18%; }
+.bar[data-height="45"] { --bar-height: 45%; }
+.bar[data-height="40"] { --bar-height: 40%; }
+.bar[data-height="38"] { --bar-height: 38%; }
+.bar[data-height="70"] { --bar-height: 70%; }
+.bar[data-height="65"] { --bar-height: 65%; }
+.bar[data-height="62"] { --bar-height: 62%; }
+.bar[data-height="90"] { --bar-height: 90%; }
+.bar[data-height="85"] { --bar-height: 85%; }
+.bar[data-height="82"] { --bar-height: 82%; }
+.bar[data-height="100"] { --bar-height: 100%; }
+
 
 /* ============ PROGRAMES-EMERGENCIA.CSS ============ */
 /* Programes d'Emergència Sectorial - Estils */
