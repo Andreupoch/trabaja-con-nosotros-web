@@ -1,0 +1,136 @@
+/* ============================================
+   Hero Component Styles
+   ============================================ */
+
+/* Base Hero Styles */
+.hero-page {
+  position: relative;
+  color: var(--color-text-white);
+  padding: var(--spacing-3xl) var(--spacing-md);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Hero with Background Image */
+.hero-page.hero-bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hero Overlay for Better Text Readability */
+.hero-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    var(--color-bg-overlay),
+    var(--color-bg-overlay-light)
+  );
+  z-index: 1;
+}
+
+/* Hero Content Container */
+.hero-page > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Title */
+.hero-page h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Subtitle */
+.hero-page p {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-relaxed);
+  max-width: 800px;
+  margin: 0 auto var(--spacing-2xl);
+  opacity: 0.95;
+}
+
+/* Hero Variations by Page */
+.hero-about {
+  background-image: url('/assets/images/pexels-fauxels-3184292.jpg');
+}
+
+.hero-services {
+  background-image: url('/assets/images/pexels-rdne-7414218.jpg');
+}
+
+.hero-products {
+  background-image: url('/assets/images/pexels-fauxels-3183170.jpg');
+}
+
+.hero-clients {
+  background-image: url('/assets/images/pexels-christina-morillo-1181467.jpg');
+}
+
+.hero-blog {
+  background-image: url('/assets/images/pexels-negative-space-169573.jpg');
+}
+
+.hero-social-analysis {
+  background-image: url('/assets/images/pexels-pixabay-267350.jpg');
+}
+
+.hero-blueway {
+  background-image: url('/assets/images/pexels-leeloo-8919513.jpg');
+}
+
+.hero-academy {
+  background-image: url('/assets/images/hero-academy.jpg');
+}
+
+.hero-portfolio {
+  background-image: url('/assets/images/pexels-startup-stock-photos-7096.jpg');
+}
+
+.hero-contact {
+  background-image: url('/assets/images/pexels-miguel-a-padrinan-3785927.jpg');
+}
+
+.hero-research {
+  background-image: url('/assets/images/pexels-lukas-590016.jpg');
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-page {
+    padding: var(--spacing-2xl) var(--spacing-md);
+    min-height: 300px;
+  }
+  
+  .hero-page h1 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .hero-page p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-page h1 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .hero-page p {
+    font-size: var(--font-size-base);
+  }
+}

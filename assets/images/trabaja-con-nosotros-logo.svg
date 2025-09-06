@@ -1,0 +1,38 @@
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="300" cy="120" r="80" fill="none" stroke="#ddd" stroke-width="3"/>
+  
+  <!-- Blue to teal gradient roof -->
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- House roof left (blue) -->
+  <polygon points="220,120 300,80 380,120 350,120 300,90 250,120" fill="url(#blueGradient)"/>
+  
+  <!-- House roof right (orange) -->
+  <polygon points="300,90 350,120 380,120 300,80" fill="url(#orangeGradient)"/>
+  
+  <!-- House body -->
+  <rect x="260" y="120" width="80" height="40" fill="#0891b2"/>
+  
+  <!-- Green leaf/growth element -->
+  <path d="M240,140 Q220,120 240,100 Q260,120 240,140" fill="#84cc16"/>
+  <path d="M245,135 Q225,115 245,95 Q265,115 245,135" fill="#65a30d"/>
+  
+  <!-- Arrow pointing up (orange) -->
+  <path d="M320,140 L340,120 L360,140 L350,140 L350,160 L330,160 L330,140 Z" fill="url(#orangeGradient)"/>
+  
+  <!-- Main text -->
+  <text x="300" y="220" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#1e3a8a">TRABAJA CON NOSOTROS</text>
+  
+  <!-- Subtitle -->
+  <text x="300" y="250" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#9ca3af">Sucesión de Negocios Pequeños</text>
+</svg>

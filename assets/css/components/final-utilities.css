@@ -1,0 +1,35 @@
+/* Final utility classes for remaining inline styles */
+
+/* Border left color utilities */
+.border-left-primary {
+    border-left: 4px solid #5197FC;
+}
+
+.border-left-secondary {
+    border-left: 4px solid #6BA5B3;
+}
+
+.border-left-green {
+    border-left: 4px solid #16a34a;
+}
+
+.border-left-blue {
+    border-left: 4px solid #2563eb;
+}
+
+.border-left-purple {
+    border-left: 4px solid #7c3aed;
+}
+
+/* Grid layouts */
+.grid-two-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* Separator styles */
+.separator-top {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}

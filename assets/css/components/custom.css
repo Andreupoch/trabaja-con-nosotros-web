@@ -1,0 +1,264 @@
+/* Custom Component Classes for Specific Patterns */
+
+/* Pricing Cards */
+.pricing-card-highlight {
+  border-top: 4px solid #84BFA3;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(132, 191, 163, 0.15);
+}
+
+.pricing-card-standard {
+  border-top: 4px solid #6b7280;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-feature-icon {
+  color: #84BFA3;
+  margin-right: 0.5rem;
+}
+
+.pricing-description {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Typography Variants */
+.text-description {
+  font-size: 1.1rem;
+  color: #212121;
+  margin-bottom: 1rem;
+}
+
+.text-muted-large {
+  font-size: 1.1rem;
+  color: #64748b;
+}
+
+.text-muted-small {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Citations */
+.citation-number {
+  font-weight: 500;
+  color: #13123a;
+  display: inline-block;
+  min-width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.citation-type {
+  background: #ede9fe;
+  color: #6b21a8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+.citation-text {
+  flex: 1;
+  color: #4b5563;
+}
+
+.citation-link {
+  color: #1e3a8a;
+  text-decoration: none;
+  word-break: break-word;
+  font-size: 0.875rem;
+}
+
+.citation-link:hover {
+  text-decoration: underline;
+}
+
+.citation-metadata {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Contact Info */
+.contact-info-label {
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-value {
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+/* Hero Variations */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(19, 18, 58, 0.9) 0%, rgba(132, 191, 163, 0.8) 100%);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+}
+
+/* List Utilities */
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-spacing {
+  margin: 0.25rem 0 0;
+}
+
+/* Margin Utilities */
+.mb-xs {
+  margin-bottom: 0.5rem;
+}
+
+.mb-sm {
+  margin-bottom: 0.8rem;
+}
+
+.mb-md {
+  margin-bottom: 1rem;
+}
+
+.mr-xs {
+  margin-right: 0.25rem;
+}
+
+.mr-sm {
+  margin-right: 0.5rem;
+}
+
+.mt-xs {
+  margin-top: 0.25rem;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+/* Font Size Utilities */
+.text-lg {
+  font-size: 1.1rem;
+}
+
+.text-md {
+  font-size: 1rem;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
+.text-xs {
+  font-size: 0.875rem;
+}
+
+.text-2rem {
+  font-size: 2rem;
+}
+
+/* Color Utilities */
+.text-gray-800 {
+  color: #212121;
+}
+
+.text-gray-600 {
+  color: #64748b;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.text-gray-700 {
+  color: #4b5563;
+}
+
+.text-gray-900 {
+  color: #1f2937;
+}
+
+.text-success {
+  color: #84BFA3;
+}
+
+.text-purple {
+  color: #6b21a8;
+}
+
+.text-blue-900 {
+  color: #1e3a8a;
+}
+
+.bg-purple-50 {
+  background: #ede9fe;
+}
+
+/* Font Weight */
+.font-medium {
+  font-weight: 500;
+}
+
+/* Display Utilities */
+.inline-block {
+  display: inline-block;
+}
+
+.min-w-2rem {
+  min-width: 2rem;
+}
+
+/* Word Break */
+.break-word {
+  word-break: break-word;
+}
+
+/* Border Utilities */
+.border-top-success {
+  border-top: 4px solid #84BFA3;
+}
+
+.border-top-gray {
+  border-top: 4px solid #6b7280;
+}
+
+/* Shadow Effects */
+.shadow-success-lg {
+  box-shadow: 0 20px 40px rgba(132, 191, 163, 0.15);
+}
+
+/* Padding Utilities */
+.p-0 {
+  padding: 0;
+}
+
+.px-sm {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-xs {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Flex Utilities */
+.flex-1 {
+  flex: 1;
+}
+
+/* Position */
+.relative {
+  position: relative;
+}

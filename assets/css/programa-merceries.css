@@ -1,0 +1,88 @@
+/* Programa Salvem les Merceries - Estils */
+
+.hero-programa-merceries {
+  background: linear-gradient(135deg, #9B59B6, #8E44AD);
+  color: white;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-programa-merceries::before {
+  content: '🧵';
+  position: absolute;
+  font-size: 20rem;
+  opacity: 0.05;
+  right: -5rem;
+  top: -5rem;
+  transform: rotate(-15deg);
+}
+
+.crisi-banner-merceries {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: pulsacio-merceries 2s infinite;
+}
+
+@keyframes pulsacio-merceries {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  50% { 
+    transform: scale(1.02); 
+    opacity: 0.9; 
+  }
+}
+
+/* Reutilitzem els estils generals dels programes */
+.seccio-problema,
+.seccio-solucio,
+.seccio-exit,
+.seccio-partners,
+.seccio-serveis,
+.seccio-cta-final {
+  padding: 4rem 0;
+}
+
+.seccio-problema { background: #f8f9fa; }
+.seccio-solucio { background: white; }
+.seccio-exit { background: #f8f9fa; }
+
+/* Estils específics per a merceries */
+.graf-edat .barra {
+  background: linear-gradient(90deg, #9B59B6, #8E44AD);
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 25px;
+  font-weight: 600;
+  animation: creixement 1s ease-out;
+}
+
+.fase-header.fase-1 {
+  background: linear-gradient(135deg, #9B59B6, #8E44AD);
+}
+
+.fase-header.fase-2 {
+  background: linear-gradient(135deg, #E74C3C, #C0392B);
+}
+
+.fase-header.fase-3 {
+  background: linear-gradient(135deg, #16A085, #138D75);
+}
+
+.servei-item::before {
+  background: linear-gradient(90deg, #9B59B6, #8E44AD);
+}
+
+.seccio-cta-final {
+  background: linear-gradient(135deg, #9B59B6, #8E44AD);
+}

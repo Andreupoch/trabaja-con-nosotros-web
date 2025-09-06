@@ -1,0 +1,57 @@
+{
+  "businesses_preserved": {
+    "value": 450,
+    "unit": "businesses",
+    "source_label": "Dades internes agregades (2022–2024)",
+    "source_url": "/ca/transparency",
+    "last_updated": "2024-12-01"
+  },
+  "jobs_preserved": {
+    "value": 2847,
+    "unit": "jobs",
+    "source_label": "Dades internes agregades (2022–2024)",
+    "source_url": "/ca/transparency",
+    "last_updated": "2024-12-01"
+  },
+  "total_value_preserved": {
+    "value": 34200000,
+    "unit": "EUR",
+    "source_label": "Dades internes agregades (2022–2024)",
+    "source_url": "/ca/transparency",
+    "last_updated": "2024-12-01"
+  },
+  "financing_facilitated": {
+    "value": 2300000,
+    "unit": "EUR",
+    "source_label": "Dades internes agregades (2024)",
+    "source_url": "/ca/transparency",
+    "last_updated": "2024-12-01"
+  },
+  "unemployment_savings": {
+    "value": 890000,
+    "unit": "EUR",
+    "source_label": "Estimat prudent segons referències CE/OECD",
+    "source_url": "/ca/transparency",
+    "last_updated": "2024-12-01"
+  },
+  "communities_benefited": {
+    "value": 156,
+    "unit": "communities",
+    "source_label": "Dades internes agregades (2022–2024)",
+    "source_url": "/ca/transparency",
+    "last_updated": "2024-12-01"
+  },
+  "clients_served": {
+    "value": 89540,
+    "unit": "clients",
+    "source_label": "Dades internes agregades (2022–2024)",
+    "source_url": "/ca/transparency",
+    "last_updated": "2024-12-01"
+  },
+  "sources": [
+    {"label": "Comissió Europea — Business transfer and second chance", "url": "https://single-market-economy.ec.europa.eu/"},
+    {"label": "OECD — SME and Entrepreneurship Policy", "url": "https://www.oecd.org/cfe/smes/"},
+    {"label": "Reempresa (Catalunya)", "url": "https://reempresa.org"}
+  ]
+}
+

@@ -1,0 +1,148 @@
+/* Programa Salvem els Forns - Estils */
+
+.hero-programa-forns {
+  background: linear-gradient(135deg, #D35400, #E67E22);
+  color: white;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-programa-forns::before {
+  content: '🥖';
+  position: absolute;
+  font-size: 20rem;
+  opacity: 0.05;
+  right: -5rem;
+  top: -5rem;
+  transform: rotate(-15deg);
+}
+
+.crisi-banner-forns {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: pulsacio-forns 2s infinite;
+}
+
+@keyframes pulsacio-forns {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  50% { 
+    transform: scale(1.02); 
+    opacity: 0.9; 
+  }
+}
+
+/* Horari específic dels forns */
+.horari-forn {
+  background: #FFF5F0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #E67E22;
+}
+
+.horari-forn p {
+  margin: 0.5rem 0;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #FFE5D5;
+}
+
+.horari-forn p:last-child {
+  border-bottom: none;
+  font-weight: 700;
+  color: #E67E22;
+  margin-top: 1rem;
+}
+
+/* Secció d'innovacions */
+.seccio-innovacio {
+  background: white;
+  padding: 4rem 0;
+}
+
+.innovacions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.innovacio-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.innovacio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.innovacio-icona {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.innovacio-card h3 {
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.innovacio-card p {
+  color: #7F8C8D;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.impacte {
+  display: inline-block;
+  background: linear-gradient(135deg, #27AE60, #229954);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Colors específics per a forns */
+.fase-header.fase-1 {
+  background: linear-gradient(135deg, #D35400, #E67E22);
+}
+
+.fase-header.fase-2 {
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+}
+
+.fase-header.fase-3 {
+  background: linear-gradient(135deg, #27AE60, #229954);
+}
+
+.seccio-cta-final {
+  background: linear-gradient(135deg, #D35400, #E67E22);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .innovacions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .horari-forn {
+    padding: 1rem;
+  }
+}
