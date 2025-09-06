@@ -918,6 +918,203 @@
 }
 
 /* ===========================
+   ENHANCED HERO STYLES
+   =========================== */
+
+/* Logo Principal */
+.logo-principal-gran {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-8);
+  animation: logoEntrance 1.2s ease-out;
+}
+
+.logo-hero-gran {
+  height: 120px;
+  width: auto;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.logo-hero-gran:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.25));
+}
+
+/* Welcome Message Enhanced */
+.benvinguda-titol-millor {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  text-align: center;
+  margin-bottom: var(--space-6);
+  color: var(--text-inverse);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: titleSlideUp 1s ease-out 0.3s both;
+}
+
+.brand-t-blau {
+  background: linear-gradient(135deg, var(--brand-blue-primary) 0%, var(--brand-teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--font-weight-extrabold);
+  position: relative;
+  animation: letterGlow 2s ease-in-out infinite alternate;
+}
+
+.brand-n-verd {
+  background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--font-weight-extrabold);
+  position: relative;
+  animation: letterGlow 2s ease-in-out infinite alternate 0.5s;
+}
+
+/* Subtitle Elegant */
+.hero-subtitol-elegant {
+  font-size: var(--font-size-xl);
+  color: var(--text-inverse-secondary);
+  text-align: center;
+  margin-bottom: var(--space-12);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  animation: subtitleFadeIn 1s ease-out 0.6s both;
+}
+
+/* Enhanced Statistics Cards */
+.estadistiques-principals-millorades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+  animation: statsSlideUp 1s ease-out 0.9s both;
+}
+
+.estadistica-targeta-nova {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.estadistica-targeta-nova::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.estadistica-targeta-nova:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.estadistica-targeta-nova:hover::before {
+  left: 100%;
+}
+
+.percentatge-gran {
+  display: block;
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-black);
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-2);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sector-descripció {
+  font-size: var(--font-size-lg);
+  color: var(--text-inverse);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-1);
+}
+
+.sector-detall {
+  font-size: var(--font-size-base);
+  color: var(--text-inverse-secondary);
+  font-style: italic;
+  line-height: var(--line-height-relaxed);
+}
+
+.icona-sector {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-4);
+  opacity: 0.9;
+}
+
+/* Animations */
+@keyframes logoEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes titleSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes statsSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes letterGlow {
+  0% {
+    text-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
+  }
+}
+
+/* ===========================
    RESPONSIVE UTILITIES
    =========================== */
 
@@ -927,8 +1124,20 @@
     font-size: var(--font-size-5xl);
   }
   
+  .benvinguda-titol-millor {
+    font-size: var(--font-size-5xl);
+  }
+  
   .hero-nova {
     padding: var(--space-20) 0;
+  }
+  
+  .logo-hero-gran {
+    height: 140px;
+  }
+  
+  .estadistiques-principals-millorades {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 }
 
@@ -940,11 +1149,27 @@
   .footer-content {
     grid-template-columns: repeat(4, 1fr);
   }
+  
+  .logo-hero-gran {
+    height: 160px;
+  }
+  
+  .benvinguda-titol-millor {
+    font-size: var(--font-size-6xl);
+  }
+  
+  .hero-subtitol-elegant {
+    font-size: var(--font-size-2xl);
+  }
 }
 
 @media (min-width: 1024px) {
   .benvinguda-titol {
     font-size: var(--font-size-6xl);
+  }
+  
+  .benvinguda-titol-millor {
+    font-size: var(--font-size-7xl);
   }
   
   .hero-nova {
@@ -953,5 +1178,13 @@
   
   .section {
     padding: var(--space-20) 0;
+  }
+  
+  .logo-hero-gran {
+    height: 180px;
+  }
+  
+  .percentatge-gran {
+    font-size: var(--font-size-7xl);
   }
 }
