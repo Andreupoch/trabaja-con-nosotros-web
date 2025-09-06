@@ -1670,7 +1670,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-lg) 0;
+    padding: var(--space-xl) 0;
     position: relative;
     flex-wrap: nowrap;
     white-space: nowrap;
