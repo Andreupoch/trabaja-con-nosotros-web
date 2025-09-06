@@ -1,28 +1,29 @@
-<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <!-- House icon with arrow - simplified for favicon -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Favicon basado en el logo de Treballa amb Nosaltres -->
   <defs>
-    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1e3a8a"/>
-      <stop offset="100%" stop-color="#0891b2"/>
-    </linearGradient>
-    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#ea580c"/>
-    </linearGradient>
+    <style>
+      .favicon-bg { fill: #2563eb; }
+      .favicon-text { fill: #ffffff; font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; }
+      .favicon-accent { fill: #fbbf24; }
+    </style>
   </defs>
   
-  <!-- Background circle -->
-  <circle cx="16" cy="16" r="15" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <!-- Fondo principal -->
+  <rect class="favicon-bg" width="32" height="32" rx="4"/>
   
-  <!-- House roof -->
-  <polygon points="8,16 16,8 24,16 22,16 16,10 10,16" fill="url(#blueGrad)"/>
+  <!-- Elemento central representando conexión/trabajo -->
+  <circle class="favicon-accent" cx="16" cy="16" r="6"/>
+  <circle class="favicon-bg" cx="16" cy="16" r="3"/>
   
-  <!-- House body -->
-  <rect x="12" y="16" width="8" height="6" fill="url(#blueGrad)"/>
+  <!-- Puntos de conexión -->
+  <circle class="favicon-accent" cx="8" cy="12" r="2"/>
+  <circle class="favicon-accent" cx="24" cy="12" r="2"/>
+  <circle class="favicon-accent" cx="8" cy="20" r="2"/>
+  <circle class="favicon-accent" cx="24" cy="20" r="2"/>
   
-  <!-- Growth arrow -->
-  <path d="M20,18 L24,14 L26,16 L24,16 L24,22 L22,22 L22,16 Z" fill="url(#orangeGrad)"/>
-  
-  <!-- Green leaf -->
-  <path d="M10,20 Q8,18 10,16 Q12,18 10,20" fill="#84cc16"/>
+  <!-- Líneas de conexión -->
+  <line stroke="#ffffff" stroke-width="1" x1="10" y1="13" x2="13" y2="15"/>
+  <line stroke="#ffffff" stroke-width="1" x1="22" y1="13" x2="19" y2="15"/>
+  <line stroke="#ffffff" stroke-width="1" x1="10" y1="19" x2="13" y2="17"/>
+  <line stroke="#ffffff" stroke-width="1" x1="22" y1="19" x2="19" y2="17"/>
 </svg>
