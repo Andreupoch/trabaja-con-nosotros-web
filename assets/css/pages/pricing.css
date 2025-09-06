@@ -25,7 +25,7 @@
 
 /* Featured Card */
 .pricing-card.featured {
-  background: linear-gradient(135deg, #13123a 0%, #1e1d4a 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: #fff;
   transform: scale(1.05);
 }
@@ -39,7 +39,7 @@
 
 .pricing-card.featured .badge {
   background: #f9d67d;
-  color: #13123a;
+  color: var(--color-primary);
   position: absolute;
   top: -15px;
   right: 30px;
@@ -52,14 +52,14 @@
 /* Pricing Header */
 .pricing-card h3 {
   font-size: 1.5rem;
-  color: #13123a;
+  color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
 
 .price-amount {
   font-size: 3rem;
   font-weight: bold;
-  color: #13123a;
+  color: var(--color-primary);
   display: inline-block;
 }
 
@@ -103,7 +103,7 @@
   text-decoration: none;
   display: block;
   transition: all 0.3s;
-  background: #13123a;
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -114,7 +114,7 @@
 
 .pricing-card.featured .cta-button {
   background: #f9d67d;
-  color: #13123a;
+  color: var(--color-primary);
 }
 
 .pricing-card.featured .cta-button:hover {
@@ -137,7 +137,7 @@
 }
 
 .faq-item h4 {
-  color: #13123a;
+  color: var(--color-primary);
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -159,7 +159,7 @@
 }
 
 .comparison-table th {
-  background: #13123a;
+  background: var(--color-primary);
   color: #fff;
   padding: 1.2rem;
   text-align: left;

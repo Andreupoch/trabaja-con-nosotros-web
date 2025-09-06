@@ -9,13 +9,14 @@
 
 :root {
   /* Colors Principals */
-  --primary-blue: #13123a;
-  --primary-blue-hover: #1e1b4b;
-  --primary-blue-light: #3b3a8f;
+  --primary-blue: #2563eb;  /* Logo blue */
+  --primary-blue-hover: #1d4ed8;  /* Darker logo blue */
+  --primary-blue-light: #3b82f6;  /* Lighter logo blue */
   --secondary-blue: #2563eb;
   --light-blue: #5197fc;
   --accent-blue: #0ea5e9;
   --sky-blue: #06b6d4;
+  --tertiary-green: #10b981;  /* Logo green */
 
   /* Colors Neutres */
   --white: #ffffff;

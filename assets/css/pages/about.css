@@ -1,20 +1,20 @@
 /* Page-specific styles for about */
 
 :root{
-      --ab-bg:#13123a;
+      --ab-bg:var(--color-primary);
       --ab-fg:#ffffff;
       --ab-card:#ffffff;
       --ab-card-border:#e5e7eb;
-      --ab-text:#13123a;
+      --ab-text:var(--color-primary);
       --ab-muted:#e0e7ef;
-      --ab-grad-from:#13123a;
+      --ab-grad-from:var(--color-primary);
       --ab-grad-to:#3b3a8f;
     }
     /* Secció cronologia (fons fosc) */
     #story.story-section{background:var(--ab-bg); padding:4rem 0; color:var(--ab-fg);} 
     #story .container{max-width:900px; margin:0 auto; padding:0 1rem;}
     /* Secció missió/valors (fons clar) */
-    #mission.story-section{background:#fff; color:#13123a; padding:4rem 0;}
+    #mission.story-section{background:#fff; color:var(--color-primary); padding:4rem 0;}
     #mission .container{max-width:900px; margin:0 auto; padding:0 1rem;}
     /* Blocs i targetes */
     .story-intro h2{font-size:2rem; margin:0 0 1rem 0; text-align:center;}
@@ -31,20 +31,20 @@
 
 /* Extracted from es/about.html */
 :root{
-      --ab-bg:#13123a;
+      --ab-bg:var(--color-primary);
       --ab-fg:#ffffff;
       --ab-card:#ffffff;
       --ab-card-border:#e5e7eb;
-      --ab-text:#13123a;
+      --ab-text:var(--color-primary);
       --ab-muted:#e0e7ef;
-      --ab-grad-from:#13123a;
+      --ab-grad-from:var(--color-primary);
       --ab-grad-to:#3b3a8f;
     }
     /* Sección cronología (fondo oscuro) */
     #story.story-section{background:var(--ab-bg); padding:4rem 0; color:var(--ab-fg);} 
     #story .container{max-width:900px; margin:0 auto; padding:0 1rem;}
     /* Sección misión/valores (fondo claro) */
-    #mission.story-section{background:#fff; color:#13123a; padding:4rem 0;}
+    #mission.story-section{background:#fff; color:var(--color-primary); padding:4rem 0;}
     #mission .container{max-width:900px; margin:0 auto; padding:0 1rem;}
     /* Bloques y tarjetas */
     .story-intro h2{font-size:2rem; margin:0 0 1rem 0; text-align:center;}
@@ -61,20 +61,20 @@
 
 /* Extracted from en/about.html */
 :root{
-      --ab-bg:#13123a;
+      --ab-bg:var(--color-primary);
       --ab-fg:#ffffff;
       --ab-card:#ffffff;
       --ab-card-border:#e5e7eb;
-      --ab-text:#13123a;
+      --ab-text:var(--color-primary);
       --ab-muted:#e0e7ef;
-      --ab-grad-from:#13123a;
+      --ab-grad-from:var(--color-primary);
       --ab-grad-to:#3b3a8f;
     }
     /* Timeline section (dark background) */
     #story.story-section{background:var(--ab-bg); padding:4rem 0; color:var(--ab-fg);} 
     #story .container{max-width:900px; margin:0 auto; padding:0 1rem;}
     /* Mission/values section (light background) */
-    #mission.story-section{background:#fff; color:#13123a; padding:4rem 0;}
+    #mission.story-section{background:#fff; color:var(--color-primary); padding:4rem 0;}
     #mission .container{max-width:900px; margin:0 auto; padding:0 1rem;}
     /* Blocks and cards */
     .story-intro h2{font-size:2rem; margin:0 0 1rem 0; text-align:center;}

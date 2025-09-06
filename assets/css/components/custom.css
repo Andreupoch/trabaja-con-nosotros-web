@@ -47,7 +47,7 @@
 /* Citations */
 .citation-number {
   font-weight: 500;
-  color: #13123a;
+  color: var(--color-primary);
   display: inline-block;
   min-width: 2rem;
   margin-right: 0.5rem;

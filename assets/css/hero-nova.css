@@ -4,14 +4,14 @@
 
 /* Colors del logo */
 :root {
-  --logo-t-color: #2e6bd1; /* Blau del logo */
+  --logo-t-color: #06b6d4; /* Logo teal color */
   --logo-n-color: #28a745; /* Verd del logo */
   --hero-gradient: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
 }
 
 /* Hero section nova */
 .hero-nova {
-  background: var(--hero-gradient);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   padding: 4rem 2rem 3rem;
   position: relative;
   overflow: hidden;
@@ -41,8 +41,8 @@
   font-weight: 800;
   margin-bottom: 1rem;
   line-height: 1.2;
-  color: #ffffff !important;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
+  color: #1a202c !important;
+  text-shadow: none;
   letter-spacing: -0.02em;
 }
 
@@ -61,10 +61,10 @@
 .hero-subtitol {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ffffff !important;
+  color: #4a5568 !important;
   opacity: 1;
   margin-bottom: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9);
+  text-shadow: none;
 }
 
 /* Banner d'alerta */
@@ -129,8 +129,8 @@
   opacity: 1;
   line-height: 1.4;
   font-weight: 600;
-  color: #ffffff !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  color: #2d3748 !important;
+  text-shadow: none;
 }
 
 /* Crida a l'acció */
@@ -138,10 +138,10 @@
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 700;
   margin: 3rem 0 2rem;
-  color: #ffffff !important;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 0.8);
+  color: #2d3748 !important;
+  text-shadow: none;
   line-height: 1.3;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 2px solid rgba(45, 55, 72, 0.2);
   padding-bottom: 1rem;
 }
 
