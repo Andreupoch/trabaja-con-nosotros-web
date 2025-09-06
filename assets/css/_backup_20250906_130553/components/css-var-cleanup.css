@@ -1,0 +1,57 @@
+/* Classes for CSS variable-based inline styles */
+
+/* Text colors using CSS variables */
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
+.text-info-dark { color: var(--info-dark); }
+.text-primary-var { color: var(--text-primary); }
+.text-secondary-var { color: var(--text-secondary); }
+
+/* Combined text and font weight */
+.text-info-semibold {
+    color: var(--info-dark);
+    font-weight: var(--font-semibold);
+}
+
+.text-success-semibold {
+    color: var(--success);
+    font-weight: var(--font-semibold);
+}
+
+.text-warning-semibold {
+    color: var(--warning);
+    font-weight: var(--font-semibold);
+}
+
+/* Text with margin bottom */
+.text-primary-mb-md {
+    margin-bottom: var(--space-md);
+    color: var(--text-primary);
+}
+
+.text-primary-mb-sm {
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+/* Heading styles */
+.heading-md-primary {
+    font-size: var(--font-md);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+/* Backgrounds using CSS variables */
+.bg-gray-100-var { background: var(--gray-100); }
+.bg-secondary-var { background: var(--bg-secondary); }
+
+/* Borders using CSS variables */
+.border-bottom-gray-200 { border-bottom: 1px solid var(--gray-200); }
+
+/* Generic variable classes */
+.mb-var { margin-bottom: var(--space-md); }
+.font-weight-var { font-weight: var(--font-semibold); }
+.font-size-var { font-size: var(--font-md); }
+.text-var { color: var(--text-primary); }
+.bg-var { background: var(--bg-secondary); }

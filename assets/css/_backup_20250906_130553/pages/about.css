@@ -1,0 +1,90 @@
+/* Page-specific styles for about */
+
+:root{
+      --ab-bg:#13123a;
+      --ab-fg:#ffffff;
+      --ab-card:#ffffff;
+      --ab-card-border:#e5e7eb;
+      --ab-text:#13123a;
+      --ab-muted:#e0e7ef;
+      --ab-grad-from:#13123a;
+      --ab-grad-to:#3b3a8f;
+    }
+    /* Secció cronologia (fons fosc) */
+    #story.story-section{background:var(--ab-bg); padding:4rem 0; color:var(--ab-fg);} 
+    #story .container{max-width:900px; margin:0 auto; padding:0 1rem;}
+    /* Secció missió/valors (fons clar) */
+    #mission.story-section{background:#fff; color:#13123a; padding:4rem 0;}
+    #mission .container{max-width:900px; margin:0 auto; padding:0 1rem;}
+    /* Blocs i targetes */
+    .story-intro h2{font-size:2rem; margin:0 0 1rem 0; text-align:center;}
+    /* Títol de la història en blanc sobre fons fosc */
+    #story .story-intro h2{color:#ffffff;}
+    .story-wrap{display:flex; flex-direction:column; gap:1.25rem;}
+    .story-block{display:grid; grid-template-columns:1fr 280px; gap:1rem; align-items:start; background:var(--ab-card); border:1px solid var(--ab-card-border); border-radius:1rem; padding:1rem;}
+    .story-text{font-size:1.05rem; line-height:1.6; color:var(--ab-text);} 
+    .milestone{background:linear-gradient(135deg,var(--ab-grad-from) 0%,var(--ab-grad-to) 100%); border:1px solid var(--ab-grad-from); border-left:4px solid var(--ab-grad-from); border-radius:.75rem; padding:1rem; color:#fff;}
+    .milestone .when{font-size:.95rem; color:var(--ab-muted); margin:0 0 .35rem 0; display:flex; gap:.35rem; align-items:center;}
+    .milestone h4{margin:.1rem 0 .35rem 0; font-size:1rem; font-weight:800; color:#fff;}
+    .milestone .desc{margin:0; font-size:.95rem; color:#fff;}
+    @media (max-width:900px){ .story-block{ grid-template-columns:1fr; } }
+
+/* Extracted from es/about.html */
+:root{
+      --ab-bg:#13123a;
+      --ab-fg:#ffffff;
+      --ab-card:#ffffff;
+      --ab-card-border:#e5e7eb;
+      --ab-text:#13123a;
+      --ab-muted:#e0e7ef;
+      --ab-grad-from:#13123a;
+      --ab-grad-to:#3b3a8f;
+    }
+    /* Sección cronología (fondo oscuro) */
+    #story.story-section{background:var(--ab-bg); padding:4rem 0; color:var(--ab-fg);} 
+    #story .container{max-width:900px; margin:0 auto; padding:0 1rem;}
+    /* Sección misión/valores (fondo claro) */
+    #mission.story-section{background:#fff; color:#13123a; padding:4rem 0;}
+    #mission .container{max-width:900px; margin:0 auto; padding:0 1rem;}
+    /* Bloques y tarjetas */
+    .story-intro h2{font-size:2rem; margin:0 0 1rem 0; text-align:center;}
+    /* Título de la historia en blanco sobre fondo oscuro */
+    #story .story-intro h2{color:#ffffff;}
+    .story-wrap{display:flex; flex-direction:column; gap:1.25rem;}
+    .story-block{display:grid; grid-template-columns:1fr 280px; gap:1rem; align-items:start; background:var(--ab-card); border:1px solid var(--ab-card-border); border-radius:1rem; padding:1rem;}
+    .story-text{font-size:1.05rem; line-height:1.6; color:var(--ab-text);} 
+    .milestone{background:linear-gradient(135deg,var(--ab-grad-from) 0%,var(--ab-grad-to) 100%); border:1px solid var(--ab-grad-from); border-left:4px solid var(--ab-grad-from); border-radius:.75rem; padding:1rem; color:#fff;}
+    .milestone .when{font-size:.95rem; color:var(--ab-muted); margin:0 0 .35rem 0; display:flex; gap:.35rem; align-items:center;}
+    .milestone h4{margin:.1rem 0 .35rem 0; font-size:1rem; font-weight:800; color:#fff;}
+    .milestone .desc{margin:0; font-size:.95rem; color:#fff;}
+    @media (max-width:900px){ .story-block{ grid-template-columns:1fr; } }
+
+/* Extracted from en/about.html */
+:root{
+      --ab-bg:#13123a;
+      --ab-fg:#ffffff;
+      --ab-card:#ffffff;
+      --ab-card-border:#e5e7eb;
+      --ab-text:#13123a;
+      --ab-muted:#e0e7ef;
+      --ab-grad-from:#13123a;
+      --ab-grad-to:#3b3a8f;
+    }
+    /* Timeline section (dark background) */
+    #story.story-section{background:var(--ab-bg); padding:4rem 0; color:var(--ab-fg);} 
+    #story .container{max-width:900px; margin:0 auto; padding:0 1rem;}
+    /* Mission/values section (light background) */
+    #mission.story-section{background:#fff; color:#13123a; padding:4rem 0;}
+    #mission .container{max-width:900px; margin:0 auto; padding:0 1rem;}
+    /* Blocks and cards */
+    .story-intro h2{font-size:2rem; margin:0 0 1rem 0; text-align:center;}
+    /* Story title in white on dark background */
+    #story .story-intro h2{color:#ffffff;}
+    .story-wrap{display:flex; flex-direction:column; gap:1.25rem;}
+    .story-block{display:grid; grid-template-columns:1fr 280px; gap:1rem; align-items:start; background:var(--ab-card); border:1px solid var(--ab-card-border); border-radius:1rem; padding:1rem;}
+    .story-text{font-size:1.05rem; line-height:1.6; color:var(--ab-text);} 
+    .milestone{background:linear-gradient(135deg,var(--ab-grad-from) 0%,var(--ab-grad-to) 100%); border:1px solid var(--ab-grad-from); border-left:4px solid var(--ab-grad-from); border-radius:.75rem; padding:1rem; color:#fff;}
+    .milestone .when{font-size:.95rem; color:var(--ab-muted); margin:0 0 .35rem 0; display:flex; gap:.35rem; align-items:center;}
+    .milestone h4{margin:.1rem 0 .35rem 0; font-size:1rem; font-weight:800; color:#fff;}
+    .milestone .desc{margin:0; font-size:.95rem; color:#fff;}
+    @media (max-width:900px){ .story-block{ grid-template-columns:1fr; } }

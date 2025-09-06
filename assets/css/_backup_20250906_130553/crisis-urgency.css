@@ -1,0 +1,260 @@
+/* Crisis Alert and Urgency Styles */
+
+.crisi-banner {
+  background: linear-gradient(90deg, #FF6B35, #F43F2E);
+  color: white;
+  padding: 12px 24px;
+  margin-bottom: 2rem;
+  display: inline-block;
+  border-radius: 8px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.02); }
+}
+
+.crisi-icona {
+  font-size: 1.5rem;
+  margin-right: 12px;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.crisi-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Crisis Statistics */
+.crisi-estadistiques {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-urgent {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 107, 53, 0.5);
+  min-width: 250px;
+}
+
+.stat-big {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FF6B35;
+  margin-bottom: 0.5rem;
+}
+
+.stat-detail {
+  display: block;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* Hero Solution */
+.destacat-solucio {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #00A878;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 2rem 0;
+  line-height: 1.2;
+}
+
+/* Impact Statistics */
+.impacte-estadistiques {
+  background: linear-gradient(135deg, rgba(0, 61, 122, 0.1), rgba(0, 168, 120, 0.1));
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.impacte-element {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.impacte-numero {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #FF6B35, #F43F2E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.impacte-etiqueta {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Enhanced CTA Buttons */
+.boto-gran {
+  padding: 18px 36px !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.boto-gran:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255, 107, 53, 0.4) !important;
+}
+
+.boto-icona {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+/* Trust Section */
+.confianca-seccio {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.confianca-titol {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.confianca-logotips {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-weight: 600;
+  color: white;
+}
+
+.confianca-logotips span {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.confianca-logotips span:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Enhanced Trust Indicators */
+.confianca-indicadors {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.confianca-element {
+  background: rgba(0, 168, 120, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 0.5rem;
+  min-width: 180px;
+  border: 1px solid rgba(0, 168, 120, 0.3);
+  transition: all 0.3s ease;
+}
+
+.confianca-element:hover {
+  background: rgba(0, 168, 120, 0.2);
+  transform: translateY(-3px);
+}
+
+.confianca-numero {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #00A878;
+  margin-bottom: 0.5rem;
+}
+
+.confianca-etiqueta {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .crisi-estadistiques {
+    gap: 1.5rem;
+  }
+  
+  .stat-urgent {
+    min-width: 200px;
+  }
+  
+  .destacat-solucio {
+    font-size: 2rem;
+  }
+  
+  .impacte-estadistiques {
+    padding: 1rem;
+  }
+  
+  .impacte-numero {
+    font-size: 2rem;
+  }
+  
+  .boto-gran {
+    padding: 14px 28px !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .crisi-banner {
+    padding: 10px 16px;
+  }
+  
+  .crisi-text {
+    font-size: 0.9rem;
+  }
+  
+  .stat-big {
+    font-size: 1.8rem;
+  }
+  
+  .destacat-solucio {
+    font-size: 1.5rem;
+  }
+  
+  .confianca-logotips {
+    font-size: 0.85rem;
+  }
+}

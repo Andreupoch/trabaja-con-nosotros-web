@@ -1,0 +1,302 @@
+/* ===========================
+   TRABAJA CON NOSOTROS DESIGN TOKENS
+   Sistema unificat de colors, tipografies i propietats del disseny
+   Basat en el logo TYN amb colors WCAG AA compliance
+   =========================== */
+
+:root {
+  /* ===========================
+     BRAND COLORS FROM LOGO
+     =========================== */
+  
+  /* Logo Color Palette - Gradient Blue → Teal → Green */
+  --brand-blue-primary: #2563eb;      /* Deep blue from logo */
+  --brand-blue-light: #3b82f6;        /* Mid-transition blue */
+  --brand-teal: #06b6d4;              /* Teal from logo center */
+  --brand-teal-light: #0891b2;        /* Darker teal for contrast */
+  --brand-green: #10b981;             /* Green from logo end */
+  --brand-green-dark: #059669;        /* Darker green for text */
+  
+  /* Logo-inspired gradient */
+  --brand-gradient: linear-gradient(135deg, #2563eb 0%, #06b6d4 50%, #10b981 100%);
+  --brand-gradient-vertical: linear-gradient(180deg, #2563eb 0%, #06b6d4 50%, #10b981 100%);
+  --brand-gradient-overlay: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(6, 182, 212, 0.8), rgba(16, 185, 129, 0.9));
+  
+  /* ===========================
+     SEMANTIC COLOR SYSTEM
+     =========================== */
+  
+  /* Primary Colors - Based on brand blue */
+  --color-primary: var(--brand-blue-primary);
+  --color-primary-hover: #1d4ed8;
+  --color-primary-active: #1e40af;
+  --color-primary-light: #dbeafe;
+  --color-primary-dark: #1e3a8a;
+  
+  /* Secondary Colors - Based on brand teal */
+  --color-secondary: var(--brand-teal);
+  --color-secondary-hover: #0891b2;
+  --color-secondary-active: #0e7490;
+  --color-secondary-light: #cffafe;
+  --color-secondary-dark: #164e63;
+  
+  /* Accent Colors - Based on brand green */
+  --color-accent: var(--brand-green);
+  --color-accent-hover: #059669;
+  --color-accent-active: #047857;
+  --color-accent-light: #d1fae5;
+  --color-accent-dark: #065f46;
+  
+  /* ===========================
+     TEXT COLORS - WCAG AA COMPLIANT
+     =========================== */
+  
+  /* High contrast text colors (4.5:1+ ratio) */
+  --text-primary: #1f2937;        /* Gray-800, 13.5:1 ratio on white */
+  --text-secondary: #4b5563;      /* Gray-600, 7.0:1 ratio on white */
+  --text-tertiary: #6b7280;       /* Gray-500, 4.6:1 ratio on white (minimum compliant) */
+  --text-light: #9ca3af;          /* Gray-400, only for disabled states */
+  --text-inverse: #ffffff;        /* White text */
+  --text-inverse-secondary: #f3f4f6; /* Light gray on dark backgrounds */
+  
+  /* Text on colored backgrounds */
+  --text-on-primary: #ffffff;     /* White on primary blue */
+  --text-on-secondary: #ffffff;   /* White on teal */
+  --text-on-accent: #ffffff;      /* White on green */
+  --text-on-dark: #ffffff;        /* White on dark backgrounds */
+  
+  /* Semantic text colors */
+  --text-success: #059669;        /* Dark green, accessible */
+  --text-warning: #d97706;        /* Dark orange, accessible */
+  --text-error: #dc2626;          /* Dark red, accessible */
+  --text-info: var(--color-primary); /* Primary blue */
+  
+  /* ===========================
+     BACKGROUND COLORS
+     =========================== */
+  
+  /* Base backgrounds */
+  --bg-white: #ffffff;
+  --bg-gray-50: #f9fafb;
+  --bg-gray-100: #f3f4f6;
+  --bg-gray-200: #e5e7eb;
+  --bg-dark: #1f2937;
+  
+  /* Brand backgrounds */
+  --bg-primary: var(--color-primary);
+  --bg-secondary: var(--color-secondary);
+  --bg-accent: var(--color-accent);
+  --bg-gradient: var(--brand-gradient);
+  
+  /* Hero and overlay backgrounds */
+  --bg-hero-overlay: rgba(31, 41, 55, 0.90);     /* Increased opacity for readability */
+  --bg-hero-overlay-light: rgba(31, 41, 55, 0.85); /* Still strong contrast */
+  --bg-overlay-primary: rgba(37, 99, 235, 0.90);
+  --bg-overlay-secondary: rgba(6, 182, 212, 0.85);
+  
+  /* Semantic backgrounds */
+  --bg-success: #ecfdf5;
+  --bg-success-border: var(--color-accent);
+  --bg-warning: #fffbeb;
+  --bg-warning-border: #f59e0b;
+  --bg-error: #fef2f2;
+  --bg-error-border: #ef4444;
+  --bg-info: #eff6ff;
+  --bg-info-border: var(--color-primary);
+  
+  /* ===========================
+     TYPOGRAPHY SCALE
+     =========================== */
+  
+  /* Font families */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  
+  /* Font sizes - Modular scale (1.25 ratio) */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 1.875rem;    /* 30px */
+  --font-size-4xl: 2.25rem;     /* 36px */
+  --font-size-5xl: 3rem;        /* 48px */
+  --font-size-6xl: 3.75rem;     /* 60px */
+  --font-size-7xl: 4.5rem;      /* 72px */
+  
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  
+  /* Line heights */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  
+  /* ===========================
+     SPACING SCALE
+     =========================== */
+  
+  /* Spacing scale - 4px base unit */
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: 0.125rem;    /* 2px */
+  --space-1: 0.25rem;       /* 4px */
+  --space-1-5: 0.375rem;    /* 6px */
+  --space-2: 0.5rem;        /* 8px */
+  --space-2-5: 0.625rem;    /* 10px */
+  --space-3: 0.75rem;       /* 12px */
+  --space-3-5: 0.875rem;    /* 14px */
+  --space-4: 1rem;          /* 16px */
+  --space-5: 1.25rem;       /* 20px */
+  --space-6: 1.5rem;        /* 24px */
+  --space-7: 1.75rem;       /* 28px */
+  --space-8: 2rem;          /* 32px */
+  --space-9: 2.25rem;       /* 36px */
+  --space-10: 2.5rem;       /* 40px */
+  --space-11: 2.75rem;      /* 44px */
+  --space-12: 3rem;         /* 48px */
+  --space-14: 3.5rem;       /* 56px */
+  --space-16: 4rem;         /* 64px */
+  --space-20: 5rem;         /* 80px */
+  --space-24: 6rem;         /* 96px */
+  --space-28: 7rem;         /* 112px */
+  --space-32: 8rem;         /* 128px */
+  --space-36: 9rem;         /* 144px */
+  --space-40: 10rem;        /* 160px */
+  --space-44: 11rem;        /* 176px */
+  --space-48: 12rem;        /* 192px */
+  --space-52: 13rem;        /* 208px */
+  --space-56: 14rem;        /* 224px */
+  --space-60: 15rem;        /* 240px */
+  --space-64: 16rem;        /* 256px */
+  --space-72: 18rem;        /* 288px */
+  --space-80: 20rem;        /* 320px */
+  --space-96: 24rem;        /* 384px */
+  
+  /* ===========================
+     BORDER RADIUS
+     =========================== */
+  
+  --radius-none: 0;
+  --radius-sm: 0.125rem;     /* 2px */
+  --radius-base: 0.25rem;    /* 4px */
+  --radius-md: 0.375rem;     /* 6px */
+  --radius-lg: 0.5rem;       /* 8px */
+  --radius-xl: 0.75rem;      /* 12px */
+  --radius-2xl: 1rem;        /* 16px */
+  --radius-3xl: 1.5rem;      /* 24px */
+  --radius-full: 9999px;     /* Fully rounded */
+  
+  /* ===========================
+     SHADOWS
+     =========================== */
+  
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-base: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.15), 0 12px 24px rgba(0, 0, 0, 0.08);
+  --shadow-2xl: 0 35px 60px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.1);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  
+  /* Colored shadows */
+  --shadow-primary: 0 10px 25px rgba(37, 99, 235, 0.15);
+  --shadow-secondary: 0 10px 25px rgba(6, 182, 212, 0.15);
+  --shadow-accent: 0 10px 25px rgba(16, 185, 129, 0.15);
+  
+  /* ===========================
+     TRANSITIONS
+     =========================== */
+  
+  --transition-none: none;
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Easing curves */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* ===========================
+     Z-INDEX SCALE
+     =========================== */
+  
+  --z-auto: auto;
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  
+  /* Named z-indexes */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+  
+  /* ===========================
+     BREAKPOINTS (for reference)
+     =========================== */
+  
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* ===========================
+     COMPONENT-SPECIFIC TOKENS
+     =========================== */
+  
+  /* Buttons */
+  --btn-padding-sm: var(--space-2) var(--space-3);
+  --btn-padding-md: var(--space-3) var(--space-6);
+  --btn-padding-lg: var(--space-4) var(--space-8);
+  --btn-radius: var(--radius-lg);
+  --btn-font-weight: var(--font-weight-semibold);
+  
+  /* Cards */
+  --card-padding: var(--space-6);
+  --card-radius: var(--radius-xl);
+  --card-shadow: var(--shadow-base);
+  --card-shadow-hover: var(--shadow-lg);
+  
+  /* Forms */
+  --input-padding: var(--space-3) var(--space-4);
+  --input-radius: var(--radius-md);
+  --input-border: 1px solid var(--bg-gray-200);
+  --input-border-focus: 2px solid var(--color-primary);
+  
+  /* Navigation */
+  --nav-height: 4rem;
+  --nav-padding: var(--space-4);
+  --nav-shadow: var(--shadow-sm);
+}
+
+/* ===========================
+   DARK MODE SUPPORT (Future)
+   =========================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode color overrides will be added when needed */
+    /* Currently focusing on light mode optimization */
+  }
+}

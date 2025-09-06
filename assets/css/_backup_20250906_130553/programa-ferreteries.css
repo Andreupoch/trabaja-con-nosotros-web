@@ -1,0 +1,610 @@
+/* Programa Salvem les Ferreteries - Estils */
+
+.hero-programa-ferreteries {
+  background: linear-gradient(135deg, #2C3E50, #34495E);
+  color: white;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-programa-ferreteries::before {
+  content: '🔨';
+  position: absolute;
+  font-size: 20rem;
+  opacity: 0.05;
+  right: -5rem;
+  top: -5rem;
+  transform: rotate(-15deg);
+}
+
+.crisi-banner-ferreteries {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 152, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  border: 2px solid rgba(255, 152, 0, 0.5);
+  animation: pulsacio-ferreteries 2s infinite;
+}
+
+@keyframes pulsacio-ferreteries {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  50% { 
+    transform: scale(1.02); 
+    opacity: 0.9; 
+  }
+}
+
+.crisi-icona {
+  font-size: 1.5rem;
+  animation: martell 1.5s ease-in-out infinite;
+}
+
+@keyframes martell {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-20deg); }
+  75% { transform: rotate(20deg); }
+}
+
+.crisi-text {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Seccions específiques */
+.seccio-problema,
+.seccio-solucio,
+.seccio-exit,
+.seccio-partners,
+.seccio-serveis {
+  padding: 4rem 0;
+}
+
+.seccio-problema {
+  background: #f8f9fa;
+}
+
+.seccio-solucio {
+  background: white;
+}
+
+.seccio-exit {
+  background: #f8f9fa;
+}
+
+.problema-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.problema-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.problema-card h3 {
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.problema-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.problema-card ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.graf-edat {
+  margin: 1.5rem 0;
+}
+
+.graf-edat .barra {
+  background: linear-gradient(90deg, #E67E22, #D35400);
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 25px;
+  font-weight: 600;
+  animation: creixement 1s ease-out;
+}
+
+@keyframes creixement {
+  from { 
+    width: 0; 
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.llista-perdues {
+  list-style: none;
+  padding: 0;
+}
+
+.llista-perdues li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.llista-perdues li::before {
+  content: '×';
+  position: absolute;
+  left: 0;
+  color: #E74C3C;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.testimoni-destacat {
+  background: white;
+  border-left: 5px solid #E67E22;
+  padding: 2rem;
+  margin: 3rem 0;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.testimoni-destacat blockquote {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #34495E;
+  margin: 0 0 1rem 0;
+  font-style: italic;
+}
+
+.testimoni-destacat cite {
+  color: #7F8C8D;
+  font-size: 0.95rem;
+}
+
+/* Fases del programa */
+.fases-programa {
+  margin: 3rem 0;
+}
+
+.fase-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.fase-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  color: white;
+}
+
+.fase-header.fase-1 {
+  background: linear-gradient(135deg, #3498DB, #2980B9);
+}
+
+.fase-header.fase-2 {
+  background: linear-gradient(135deg, #E67E22, #D35400);
+}
+
+.fase-header.fase-3 {
+  background: linear-gradient(135deg, #27AE60, #229954);
+}
+
+.fase-numero {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.fase-header h3 {
+  flex: 1;
+  margin: 0 1rem;
+  font-size: 1.4rem;
+}
+
+.fase-durada {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.fase-contingut {
+  padding: 2rem;
+}
+
+.fase-contingut h4 {
+  color: #2C3E50;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.1rem;
+}
+
+.fase-contingut h4:first-child {
+  margin-top: 0;
+}
+
+.fase-contingut ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fase-contingut ul li {
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.fase-contingut ul li::before {
+  position: absolute;
+  left: 0;
+}
+
+.resultats-fase {
+  background: #ECF0F1;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.resultats-fase strong {
+  color: #2C3E50;
+}
+
+/* Casos d'èxit */
+.casos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.cas-exit {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cas-exit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cas-exit img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: #ECF0F1;
+}
+
+.cas-exit h3 {
+  padding: 1rem 1.5rem 0.5rem;
+  color: #2C3E50;
+  font-size: 1.3rem;
+}
+
+.ubicacio {
+  padding: 0 1.5rem;
+  color: #7F8C8D;
+}
+
+.dades-cas {
+  padding: 1rem 1.5rem;
+  background: #ECF0F1;
+}
+
+.dades-cas p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.cas-exit blockquote {
+  padding: 1rem 1.5rem;
+  font-style: italic;
+  color: #34495E;
+  border-left: 3px solid #E67E22;
+  margin: 0;
+  background: #FFF9F5;
+}
+
+.cas-exit cite {
+  display: block;
+  padding: 0 1.5rem 1.5rem;
+  color: #7F8C8D;
+  font-size: 0.9rem;
+}
+
+/* Partners */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.partner-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-3px);
+}
+
+.partner-card img {
+  height: 60px;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.partner-card:hover img {
+  opacity: 1;
+}
+
+.partner-card h3 {
+  color: #2C3E50;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.partner-card p {
+  color: #7F8C8D;
+  font-size: 0.9rem;
+}
+
+.suport-institucional {
+  background: #ECF0F1;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.suport-institucional ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.suport-institucional ul li {
+  padding: 0.5rem 0;
+}
+
+/* Serveis */
+.serveis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.servei-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.servei-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #E67E22, #D35400);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.servei-item:hover::before {
+  transform: scaleX(1);
+}
+
+.servei-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.servei-icona {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.servei-item h3 {
+  color: #2C3E50;
+  margin-bottom: 1rem;
+}
+
+.servei-item p {
+  color: #7F8C8D;
+  margin-bottom: 1rem;
+}
+
+.servei-preu {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: #E67E22;
+  font-size: 1.1rem;
+}
+
+/* CTA Final */
+.seccio-cta-final {
+  background: linear-gradient(135deg, #2C3E50, #34495E);
+  color: white;
+  padding: 5rem 0;
+}
+
+.cta-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-box h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.cta-urgencia {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.cta-propietaris,
+.cta-emprenedors {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta-propietaris h3,
+.cta-emprenedors h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.contacte-directe {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.contacte-opcions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.contacte-item {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.contacte-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.logos-confianca {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.logos-confianca img {
+  height: 50px;
+  opacity: 0.8;
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-programa-ferreteries {
+    padding: 3rem 0;
+  }
+  
+  .problema-grid,
+  .casos-grid,
+  .partners-grid,
+  .serveis-grid,
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .fase-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .contacte-opcions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-box h2 {
+    font-size: 2rem;
+  }
+  
+  .suport-institucional ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .crisi-banner-ferreteries {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .estadistiques-crisi {
+    flex-direction: column;
+  }
+  
+  .fase-contingut {
+    padding: 1.5rem;
+  }
+  
+  .cta-box {
+    padding: 2rem 1rem;
+  }
+}

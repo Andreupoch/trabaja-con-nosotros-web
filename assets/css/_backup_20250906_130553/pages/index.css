@@ -1,0 +1,310 @@
+/* Page-specific styles for index */
+
+/* Hero Section with Background Image */
+.hero {
+  position: relative;
+  color: #fff;
+  background: linear-gradient(rgba(10,10,50,0.65), rgba(10,10,50,0.65)),
+              url('/assets/images/inici curs.jpg') center/cover no-repeat;
+  padding: 5rem 0;
+}
+
+/* Hero Tag Style */
+.hero > div:first-child span {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.5rem;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
+/* Hero Title */
+.hero h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1.5rem auto;
+}
+
+/* Hero Subtitle */
+.hero .subtitle {
+  color: #fff;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+/* Hero CTA Button - Critical Style */
+.hero .cta-primary {
+  background: #f9d67d !important;
+  color: #13123a !important;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.2s;
+  margin-top: 2rem;
+}
+
+.hero .cta-primary:hover {
+  background: #f8c646 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 214, 125, 0.3);
+}
+
+/* Trust Indicators */
+.hero .trust-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.hero .trust-item span {
+  color: #fff;
+  font-weight: 500;
+}
+
+.reasons-grid-custom .professional-card{background:#13123a !important;color:#fff !important} .reasons-grid-custom .professional-card h3, .reasons-grid-custom .professional-card .card-header p{color:#fff !important} /* White quote helper for dark cards */ .white-quote, .reasons-grid-custom .professional-card blockquote, .reasons-grid-custom .professional-card .quote{color:#fff !important} .full-bleed-white{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .reasons-grid-custom{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:1rem !important} .reasons-grid-custom .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:300px} } @media (max-width:768px){ /* Make the full-bleed container behave like normal width to avoid horizontal scroll */ .full-bleed-white{width:100%;left:0;right:0;margin-left:0;margin-right:0} /* Add a bit of horizontal padding on mobile for readability */ .full-bleed-white .container{padding:0 1rem !important} .reasons-grid-custom{grid-template-columns:1fr !important;gap:1rem !important} .reasons-grid-custom .professional-card{min-height:auto} .reasons-grid-custom .professional-card .card-header p{font-size:0.95rem} /* Hide scroll hint on larger screens only; show on mobile */ .scroll-hint{display:block} } @media (min-width:769px){.scroll-hint{display:none}} /* Ensure long content wraps nicely on narrow screens */ .reasons-grid-custom .professional-card{word-break:break-word}
+@media (max-width: 1100px) { .reasons-grid-custom { grid-template-columns: 1fr 1fr !important; grid-template-rows: auto auto auto !important; gap: 1.5rem !important; } .professional-card { height: auto !important; min-height: 300px !important; } .reasons-grid-custom > div[style*='grid-column: 2 / 5'] { grid-column: 1 / 3 !important; height: 180px !important; } .reasons-grid-custom > div[style*='grid-column: 1 / 2'] { height: 180px !important; } } @media (max-width: 700px) { .reasons-grid-custom { grid-template-columns: 1fr !important; grid-template-rows: repeat(6, auto) !important; gap: 1rem !important; } .professional-card { height: auto !important; min-height: 250px !important; grid-column: 1 !important; } .reasons-grid-custom > div[style*='grid-column: 2 / 5'] { grid-column: 1 !important; height: auto !important; min-height: 200px !important; } .reasons-grid-custom > div[style*='grid-column: 1 / 2'] { height: auto !important; min-height: 200px !important; } }
+/* Avoid blue edge on the full-bleed white block and add gutters on mobile */ @media (max-width: 768px) { .full-bleed-white{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important;} .full-bleed-white .container{padding:0 1rem !important} /* Prevent page-wide horizontal scroll: make blue full-bleed section normal width on mobile */ section[style*="background:#13123a"][style*="width:100vw"]{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important;} }
+.icon-cell-row { display: inline-flex; /* permet icona + text en línia */ align-items: center; /* alinea verticalment */ justify-content: flex-start; gap: 0.4rem; /* espai entre icona i text */ } .icon-cell-icon { flex-shrink: 0; font-size: 1rem; /* mida homogènia de les icones */ line-height: 1; } .icon-cell-text { display: inline-block; text-align: left; }
+
+/* Features Section - Critical Layout Styles */
+.features-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem;
+}
+
+.feature-item:nth-child(even) {
+  direction: rtl;
+}
+
+.feature-item:nth-child(even) > * {
+  direction: ltr;
+}
+
+.feature-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.feature-item h3 {
+  color: #13123a;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .feature-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .feature-item:nth-child(even) {
+    direction: ltr;
+  }
+}
+
+/* Audience Grid Styles */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+.audience-item {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.audience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.audience-item h3 {
+  color: #13123a;
+  margin-bottom: 1rem;
+}
+
+.audience-item ul {
+  color: #666;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Comparison Table Styles */
+.comparison-wrapper {
+  overflow-x: auto;
+  margin: 3rem 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.comparison-table th {
+  background: #13123a;
+  color: #fff;
+  padding: 1.2rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.comparison-table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.comparison-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Scroll hint for mobile */
+.scroll-hint {
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .scroll-hint {
+    display: block;
+  }
+  .comparison-wrapper {
+    position: relative;
+  }
+}
+
+/* Stat Cards Section */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card .stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #13123a;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .stat-label {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .stat-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CTA Sections */
+.cta-section {
+  background: linear-gradient(135deg, #13123a 0%, #1e1d4a 100%);
+  color: #fff;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta-section .cta-button {
+  background: #f9d67d;
+  color: #13123a;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.cta-section .cta-button:hover {
+  background: #f8c646;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(249, 214, 125, 0.4);
+}
+
+/* Extracted from es/index.html */
+.reasons-grid-custom .professional-card{background:#13123a !important;color:#fff !important} .reasons-grid-custom .professional-card h3, .reasons-grid-custom .professional-card .card-header p{color:#fff !important} /* White quote helper for dark cards */ .white-quote, .reasons-grid-custom .professional-card blockquote, .reasons-grid-custom .professional-card .quote{color:#fff !important} .full-bleed-white{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .reasons-grid-custom{grid-template-columns:repeat(2,1fr) !important;gap:1rem !important} .reasons-grid-custom .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:320px} } @media (max-width:768px){ /* Make the full-bleed container behave like normal width to avoid horizontal scroll */ .full-bleed-white{width:100%;left:0;right:0;margin-left:0;margin-right:0} /* Add a bit of horizontal padding on mobile for readability */ .full-bleed-white .container{padding:0 1rem !important} .reasons-grid-custom{grid-template-columns:1fr !important;gap:1rem !important} .reasons-grid-custom .professional-card{min-height:auto} .reasons-grid-custom .professional-card .card-header p{font-size:0.95rem} /* Show scroll hint only on mobile */ .scroll-hint{display:block} /* Prevent page-wide horizontal scroll from blue full-bleed section */ section[style*="background:#13123a"][style*="width:100vw"]{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important} } @media (min-width:769px){.scroll-hint{display:none}} /* Ensure long content wraps nicely on narrow screens */ .reasons-grid-custom .professional-card{word-break:break-word}
+.es-fixed .professional-card{background:#13123a !important;color:#fff !important} .es-fixed .professional-card h3, .es-fixed .professional-card .card-header p{color:#fff !important} .es-fixed .white-quote, .es-fixed .professional-card blockquote, .es-fixed .professional-card .quote{color:#fff !important} .es-fixed{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .es-fixed .reasons-grid-custom{grid-template-columns:repeat(2,1fr) !important;gap:1rem !important} .es-fixed .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:320px} } @media (max-width:768px){ .es-fixed{width:100%;left:0;right:0;margin-left:0;margin-right:0} .es-fixed .container{padding:0 1rem !important} .es-fixed .reasons-grid-custom{grid-template-columns:1fr !important;gap:1rem !important} .es-fixed .professional-card{min-height:auto} }
+.icon-cell-row { display: inline-flex; /* permite icono + texto en línea */ align-items: center; /* alineación vertical */ justify-content: flex-start; gap: 0.4rem; /* espacio entre icono y texto */ } .icon-cell-icon { flex-shrink: 0; font-size: 1rem; /* tamaño homogéneo de los iconos */ line-height: 1; } .icon-cell-text { display: inline-block; text-align: left; }
+
+/* Extracted from en/index.html */
+.reasons-grid-custom .professional-card{background:#13123a !important;color:#fff !important} .reasons-grid-custom .professional-card h3, .reasons-grid-custom .professional-card .card-header p{color:#fff !important} /* White quote helper for dark cards */ .white-quote, .reasons-grid-custom .professional-card blockquote, .reasons-grid-custom .professional-card .quote{color:#fff !important} .full-bleed-white{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:#fff;overflow-x:clip} @media (max-width:991px){ .reasons-grid-custom{grid-template-columns:repeat(2,1fr) !important;gap:1rem !important} .reasons-grid-custom .professional-card{grid-column:auto !important;grid-row:auto !important;min-height:320px} } @media (max-width:768px){ /* Make full-bleed behave like normal width on mobile and add gutters */ .full-bleed-white{width:100%;left:0;right:0;margin-left:0;margin-right:0} .full-bleed-white .container{padding:0 1rem !important} .reasons-grid-custom{grid-template-columns:1fr !important} /* Show scroll hint only on mobile */ .scroll-hint{display:block} /* Prevent page-wide horizontal scroll from blue full-bleed section */ section[style*="background:#13123a"][style*="width:100vw"]{width:100% !important; left:0 !important; right:0 !important; margin-left:0 !important; margin-right:0 !important} } @media (min-width:769px){.scroll-hint{display:none}} /* Prevent overflows with long content */ .reasons-grid-custom .professional-card{word-break:break-word}
+@media (max-width: 1100px) { .reasons-grid-custom { grid-template-columns: 1fr 1fr !important; grid-template-rows: auto auto auto !important; gap: 1.5rem !important; } .professional-card { height: auto !important; min-height: 300px !important; } .reasons-grid-custom > div[style*='grid-column: 2 / 5'] { grid-column: 1 / 3 !important; height: 180px !important; } .reasons-grid-custom > div[style*='grid-column: 1 / 2'] { height: 180px !important; } } @media (max-width: 700px) { .reasons-grid-custom { grid-template-columns: 1fr !important; grid-template-rows: repeat(6, auto) !important; gap: 1rem !important; } .professional-card { height: auto !important; min-height: 250px !important; grid-column: 1 !important; } .reasons-grid-custom > div[style*='grid-column: 2 / 5'] { grid-column: 1 !important; height: auto !important; min-height: 200px !important; } .reasons-grid-custom > div[style*='grid-column: 1 / 2'] { height: auto !important; min-height: 200px !important; } }
+.icon-cell-row { display: inline-flex; /* allows icon + text inline */ align-items: center; /* vertical alignment */ justify-content: flex-start; gap: 0.4rem; /* space between icon and text */ } .icon-cell-icon { flex-shrink: 0; font-size: 1rem; /* uniform icon size */ line-height: 1; } .icon-cell-text { display: inline-block; text-align: left; }

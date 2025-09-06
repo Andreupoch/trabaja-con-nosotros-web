@@ -1,0 +1,169 @@
+/* ============================================
+   Hero Nova - Disseny millorat per la home
+   ============================================ */
+
+/* Colors del logo */
+:root {
+  --logo-t-color: #2e6bd1; /* Blau del logo */
+  --logo-n-color: #28a745; /* Verd del logo */
+  --hero-gradient: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+/* Hero section nova */
+.hero-nova {
+  background: var(--hero-gradient);
+  padding: 4rem 2rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Benvinguda section */
+.hero-benvinguda {
+  margin-bottom: 3rem;
+}
+
+.logo-principal {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  opacity: 0.1;
+  /* Aquí es pot afegir el logo real */
+}
+
+.benvinguda-titol {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo-t-color {
+  color: var(--logo-t-color);
+  font-weight: 800;
+}
+
+.logo-n-color {
+  color: var(--logo-n-color);
+  font-weight: 800;
+}
+
+.hero-subtitol {
+  font-size: 1.25rem;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* Banner d'alerta */
+.crisi-alert-banner {
+  background: #e74c3c;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem auto;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.alert-icon {
+  font-size: 1.2rem;
+}
+
+/* Estadístiques principals */
+.estadistiques-principals {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.estadistica-destacada {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  min-width: 280px;
+  transition: all 0.3s ease;
+}
+
+.estadistica-destacada:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.numero-gran {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ff6b6b;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.descripcio {
+  display: block;
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Crida a l'acció */
+.crida-accio {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin: 3rem 0 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-nova {
+    padding: 3rem 1rem 2rem;
+  }
+  
+  .estadistiques-principals {
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .estadistica-destacada {
+    min-width: 260px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .numero-gran {
+    font-size: 2.8rem;
+  }
+  
+  .crisi-alert-banner {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .benvinguda-titol {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitol {
+    font-size: 1.1rem;
+  }
+  
+  .estadistica-destacada {
+    min-width: 240px;
+  }
+}

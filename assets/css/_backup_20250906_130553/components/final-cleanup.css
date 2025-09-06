@@ -1,0 +1,108 @@
+/* Final cleanup classes for remaining inline styles */
+
+/* Checkmark and icons */
+.checkmark-icon {
+    color: #84BFA3;
+    margin-right: 0.5rem;
+}
+
+.success-checkmark {
+    color: var(--success);
+    margin-right: var(--space-sm);
+}
+
+.icon-small {
+    width: 1.25rem;
+    height: 1.25rem;
+    object-fit: contain;
+}
+
+/* Positioning */
+.badge-position {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+}
+
+/* Code blocks */
+.code-block {
+    margin: 0;
+    white-space: pre-wrap;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Spacing utilities */
+.mt-2_5 { margin-top: 2.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mr-2 { margin-right: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-8 { padding: 2rem; }
+
+/* Borders */
+.border-bottom-light {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Text colors with margin */
+.text-dark-mb {
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.text-white-95 {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Standard text colors */
+.text-gray-500 { color: #6b7280; }
+.text-gray-700 { color: #374151; }
+.text-gray-800 { color: #1f2937; }
+.text-gray-900 { color: #111827; }
+.text-white { color: white; }
+.text-accent { color: #84BFA3; }
+
+/* Font weights */
+.font-bold { font-weight: bold; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+
+/* Display */
+.flex { display: flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+.block { display: block; }
+.absolute { position: absolute; }
+
+/* Flexbox */
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.flex-col { flex-direction: column; }
+
+/* Width and height */
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.max-w-full { max-width: 100%; }
+
+/* Text alignment */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+/* Backgrounds */
+.bg-gray-100 { background-color: #f3f4f6; }
+.bg-gray-200 { background-color: #e5e7eb; }
+.bg-white { background-color: white; }
+
+/* Border radius */
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-md { border-radius: 0.375rem; }
+.rounded { border-radius: 0.25rem; }
+
+/* Opacity */
+.opacity-80 { opacity: 0.8; }
+.opacity-60 { opacity: 0.6; }

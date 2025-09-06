@@ -1,0 +1,194 @@
+/* Page-specific styles for pricing */
+
+/* Pricing Cards Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* Featured Card */
+.pricing-card.featured {
+  background: linear-gradient(135deg, #13123a 0%, #1e1d4a 100%);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.pricing-card.featured h3,
+.pricing-card.featured .price-amount,
+.pricing-card.featured .price-period,
+.pricing-card.featured li {
+  color: #fff !important;
+}
+
+.pricing-card.featured .badge {
+  background: #f9d67d;
+  color: #13123a;
+  position: absolute;
+  top: -15px;
+  right: 30px;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Pricing Header */
+.pricing-card h3 {
+  font-size: 1.5rem;
+  color: #13123a;
+  margin-bottom: 0.5rem;
+}
+
+.price-amount {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #13123a;
+  display: inline-block;
+}
+
+.price-period {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+
+/* Features List */
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.pricing-features li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-features .check-icon {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+/* CTA Buttons */
+.pricing-card .cta-button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+  background: #13123a;
+  color: #fff;
+}
+
+.pricing-card .cta-button:hover {
+  background: #1e1d4a;
+  transform: translateY(-2px);
+}
+
+.pricing-card.featured .cta-button {
+  background: #f9d67d;
+  color: #13123a;
+}
+
+.pricing-card.featured .cta-button:hover {
+  background: #f8c646;
+}
+
+/* FAQ Section */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.faq-item {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.faq-item h4 {
+  color: #13123a;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.faq-item p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Comparison Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3rem 0;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.comparison-table th {
+  background: #13123a;
+  color: #fff;
+  padding: 1.2rem;
+  text-align: left;
+}
+
+.comparison-table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:hover {
+  background: #f9fafb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+}

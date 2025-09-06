@@ -1,0 +1,99 @@
+/* Final Comprehensive Cleanup Utilities */
+/* Generated automatically - handles remaining complex inline styles */
+
+/* Text and typography */
+.text-body-formatted {
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.text-2xl-spaced {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.text-2xl {
+    font-size: 24px;
+}
+
+.text-lg {
+    font-size: 18px;
+}
+
+.text-base {
+    font-size: 16px;
+}
+
+.heading-hero {
+    color: #111827;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+/* Border utilities */
+.border-left-danger {
+    border-left: 4px solid #A02822;
+}
+
+.border-left-warning {
+    border-left: 4px solid #f59e0b;
+}
+
+.border-left-yellow {
+    border-left: 4px solid #F9D67D;
+}
+
+.border-left-purple {
+    border-left: 4px solid #C4A2EA;
+}
+
+.border-left-success {
+    border-left: 4px solid #84BFA3;
+}
+
+.border-bottom-gray {
+    border-bottom: 2px solid #e5e7eb;
+}
+
+/* Padding utilities */
+.pt-hero-offset {
+    padding-top: calc(80px + var(--space-3xl));
+}
+
+.pt-9 {
+    padding-top: 2.25rem;
+}
+
+/* Margin utilities */
+.mt-8 {
+    margin-top: 2rem;
+}
+
+/* Links */
+.link-blue {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.link-blue:hover {
+    text-decoration: underline;
+}
+
+/* Layout utilities */
+.opacity-10 {
+    opacity: 0.1;
+}
+
+.min-h-300 {
+    min-height: 300px;
+}
+
+.col-span-2 {
+    grid-column: span 2;
+}
+
+.max-w-500 {
+    max-width: 500px;
+}
