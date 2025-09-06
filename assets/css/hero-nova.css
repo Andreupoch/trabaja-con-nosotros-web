@@ -34,24 +34,30 @@
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: -0.02em;
 }
 
 .logo-t-color {
-  color: var(--logo-t-color);
+  color: #4A90E2 !important;
   font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .logo-n-color {
-  color: var(--logo-n-color);
+  color: #27AE60 !important;
   font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-subtitol {
   font-size: 1.25rem;
   font-weight: 500;
-  opacity: 0.9;
+  color: #ffffff;
+  opacity: 0.95;
   margin-bottom: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Banner d'alerta */
@@ -123,8 +129,11 @@
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 600;
   margin: 3rem 0 2rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   line-height: 1.3;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 1rem;
 }
 
 /* Responsive design */
