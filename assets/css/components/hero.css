@@ -59,7 +59,8 @@
   line-height: var(--line-height-relaxed);
   max-width: 800px;
   margin: 0 auto var(--spacing-2xl);
-  opacity: 0.95;
+  opacity: 1;
+  color: var(--color-text-white);
 }
 
 /* Hero Variations by Page */
