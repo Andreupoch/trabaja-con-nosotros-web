@@ -1,0 +1,368 @@
+/* ================================================
+   TEXT CONTRAST FIX
+   Ensures all text has proper contrast across the website
+   Dark text on light backgrounds, except for specific components
+   ================================================ */
+
+/* ================================================
+   1. GLOBAL TEXT COLOR RESET
+   Force dark text colors on light backgrounds
+   ================================================ */
+
+/* Base text colors - dark on light backgrounds */
+body,
+html,
+p,
+span,
+div,
+h1, h2, h3, h4, h5, h6,
+li,
+td,
+th,
+label,
+input,
+textarea,
+select {
+  color: #1f2937 !important;
+}
+
+/* Specific text hierarchy with proper contrast */
+h1 {
+  color: #111827 !important;
+  font-weight: 700;
+}
+
+h2 {
+  color: #1f2937 !important; 
+  font-weight: 600;
+}
+
+h3 {
+  color: #374151 !important;
+  font-weight: 600;
+}
+
+h4, h5, h6 {
+  color: #4b5563 !important;
+  font-weight: 500;
+}
+
+/* Regular paragraph text */
+p {
+  color: #4b5563 !important;
+  line-height: 1.6;
+}
+
+/* Small text and captions */
+.text-sm,
+.caption,
+.meta {
+  color: #6b7280 !important;
+}
+
+/* ================================================
+   2. LINK COLORS
+   ================================================ */
+a {
+  color: #2563eb !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1d4ed8 !important;
+  text-decoration: underline;
+}
+
+/* ================================================
+   3. SPECIFIC COMPONENT OVERRIDES
+   ================================================ */
+
+/* Statistics sections - ensure visibility */
+.estadistica-destacada-gran p,
+.estadistica-destacada-gran span,
+.estadistica-destacada-gran div {
+  color: #374151 !important;
+}
+
+.descripcio-clara {
+  color: #4b5563 !important;
+}
+
+.numero-impactant {
+  color: #dc2626 !important; /* Keep red for impact */
+}
+
+/* Impact statistics */
+.impacte-element .impacte-etiqueta {
+  color: #6b7280 !important;
+}
+
+/* Trust section */
+.confianca-titol {
+  color: #6b7280 !important;
+}
+
+.confianca-logotips {
+  color: #374151 !important;
+}
+
+.confianca-etiqueta {
+  color: #6b7280 !important;
+}
+
+/* Hero subtitle */
+.subtitle-hero {
+  color: #4b5563 !important;
+}
+
+.subtitle-hero strong {
+  color: #1f2937 !important;
+}
+
+/* ================================================
+   4. CARD CONTENT
+   ================================================ */
+.card p,
+.card-content p,
+.card-content span,
+.card-content div {
+  color: #4b5563 !important;
+}
+
+.card h1,
+.card h2,
+.card h3 {
+  color: #1f2937 !important;
+}
+
+.card .text-muted {
+  color: #6b7280 !important;
+}
+
+/* ================================================
+   5. FORM ELEMENTS
+   ================================================ */
+.form-label {
+  color: #374151 !important;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  color: #1f2937 !important;
+}
+
+/* ================================================
+   6. NAVIGATION AND UI ELEMENTS
+   ================================================ */
+.nav-link {
+  color: #4b5563 !important;
+}
+
+.nav-link:hover {
+  color: #1f2937 !important;
+}
+
+/* Breadcrumbs */
+.breadcrumb-item {
+  color: #2563eb !important;
+}
+
+.breadcrumb-current {
+  color: #6b7280 !important;
+}
+
+.breadcrumb-separator {
+  color: #9ca3af !important;
+}
+
+/* ================================================
+   7. SPECIFIC EXCEPTIONS (WHITE TEXT ON COLORED BACKGROUNDS)
+   Only allow white text on dark/colored backgrounds
+   ================================================ */
+
+/* Red CTA buttons - white text allowed */
+.cta-primari,
+.button-primary {
+  color: white !important;
+}
+
+/* Dark backgrounds - white text allowed */
+.bg-dark,
+.bg-primary,
+.bg-success,
+.bg-danger,
+.bg-warning,
+.bg-info {
+  color: white !important;
+}
+
+/* Specific colored elements that need white text */
+.alert-error,
+.alert-danger {
+  color: white !important;
+}
+
+/* Navigation buttons with colored backgrounds */
+.btn-primary,
+.btn-success,
+.btn-danger {
+  color: white !important;
+}
+
+/* Badge elements with colored backgrounds */
+.badge,
+.tag,
+.label {
+  color: white !important;
+}
+
+/* Header/footer if they have dark backgrounds */
+header.dark,
+footer.dark,
+.header-dark,
+.footer-dark {
+  color: white !important;
+}
+
+/* ================================================
+   8. HERO SECTIONS - FORCE DARK TEXT
+   ================================================ */
+.hero-unified,
+.hero-unified * {
+  color: inherit !important;
+}
+
+.hero-unified h1 {
+  color: #1f2937 !important;
+}
+
+.hero-unified h2 {
+  color: #374151 !important;
+}
+
+.hero-unified p {
+  color: #4b5563 !important;
+}
+
+/* Remove any white text classes in heroes */
+.hero-unified .text-white,
+.hero-unified .text-white-95 {
+  color: #1f2937 !important;
+}
+
+/* ================================================
+   9. CONTENT SECTIONS
+   ================================================ */
+.content-section,
+.content-section p,
+.content-section div,
+.content-section span {
+  color: #4b5563 !important;
+}
+
+.content-section h1,
+.content-section h2,
+.content-section h3 {
+  color: #1f2937 !important;
+}
+
+/* ================================================
+   10. TABLE ELEMENTS
+   ================================================ */
+.table th {
+  color: #374151 !important;
+}
+
+.table td {
+  color: #4b5563 !important;
+}
+
+/* ================================================
+   11. UTILITIES OVERRIDE
+   ================================================ */
+
+/* Override any utility classes that set white text */
+.text-white {
+  color: #1f2937 !important;
+}
+
+.text-gray-100,
+.text-gray-50 {
+  color: #4b5563 !important;
+}
+
+.text-light {
+  color: #6b7280 !important;
+}
+
+/* Muted text should still be visible */
+.text-muted {
+  color: #6b7280 !important;
+}
+
+/* ================================================
+   12. SPECIFIC HOMEPAGE FIXES
+   ================================================ */
+
+/* Crisis alert section */
+.crisi-contextual-elegant p,
+.crisi-contextual-elegant div,
+.crisi-contextual-elegant span {
+  color: #374151 !important;
+}
+
+.alert-text-destacat {
+  color: #92400e !important; /* Keep brown for warning */
+}
+
+.text-esperanca {
+  color: #166534 !important; /* Keep green for hope */
+}
+
+/* Statistics in hero */
+.estadistiques-impactants p,
+.estadistiques-impactants div {
+  color: #4b5563 !important;
+}
+
+/* ================================================
+   13. ACCESSIBILITY - HIGH CONTRAST MODE
+   ================================================ */
+@media (prefers-contrast: high) {
+  body,
+  p,
+  div,
+  span {
+    color: #000000 !important;
+  }
+  
+  h1, h2, h3 {
+    color: #000000 !important;
+  }
+  
+  .text-muted {
+    color: #333333 !important;
+  }
+}
+
+/* ================================================
+   14. IMPORTANT OVERRIDES
+   Force all text to be visible
+   ================================================ */
+
+/* Catch-all for any remaining white text */
+*:not(.cta-primari):not(.button-primary):not(.btn-primary):not(.badge):not(.alert-error) {
+  color: inherit;
+}
+
+/* Specific invisible text fixes */
+.hero-homepage *,
+.hero-unified * {
+  color: #1f2937 !important;
+}
+
+/* Override any remaining white text utilities */
+.text-white:not(.cta-primari):not(.button-primary):not(.btn-primary) {
+  color: #1f2937 !important;
+}
