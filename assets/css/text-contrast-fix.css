@@ -163,6 +163,25 @@ a:hover {
   color: #1f2937 !important;
 }
 
+/* Fix dropdown menu hover - prevent blue text on blue background */
+.nav-links a:hover,
+.dropdown-menu a:hover {
+  color: #1f2937 !important; /* Dark text */
+  background-color: #f3f4f6 !important; /* Light gray background */
+}
+
+/* Ensure dropdown menu items have proper contrast */
+.dropdown-menu a {
+  color: #4b5563 !important;
+}
+
+/* Fix active navigation states */
+.nav-link.active,
+.nav-links a.active {
+  color: white !important;
+  background-color: #2563eb !important;
+}
+
 /* Breadcrumbs */
 .breadcrumb-item {
   color: #2563eb !important;
