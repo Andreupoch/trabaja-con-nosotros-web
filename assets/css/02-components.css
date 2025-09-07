@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-6) 0; /* More padding for larger header */
+  padding: var(--space-8) 0; /* Extra padding for 200px logo */
   position: relative;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .logo img {
-  height: 80px; /* Much larger logo */
+  height: 200px; /* Extra large logo for desktop */
   width: auto;
   transition: transform var(--transition-normal);
 }
@@ -264,9 +264,15 @@
 }
 
 /* Logo responsive adjustments */
+@media (max-width: 1023px) {
+  .logo img {
+    height: 120px; /* Medium size on tablets */
+  }
+}
+
 @media (max-width: 767px) {
   .logo img {
-    height: 60px; /* Slightly smaller on mobile */
+    height: 80px; /* Smaller on mobile */
   }
   
   .logo-slogan {
