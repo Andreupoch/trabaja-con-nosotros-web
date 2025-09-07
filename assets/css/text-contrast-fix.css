@@ -229,6 +229,14 @@ a:hover {
   color: white !important;
 }
 
+/* User type selector buttons - must have white text on colored backgrounds */
+.user-type-button,
+.user-type-button span,
+.user-type-button .user-label,
+.user-type-button .user-icon {
+  color: white !important;
+}
+
 /* Badge elements with colored backgrounds */
 .badge,
 .tag,
