@@ -1,0 +1,150 @@
+/* ================================================
+   HERO STYLE OVERRIDES
+   Disables all conflicting hero styles from main.css
+   Must be loaded AFTER main.css but BEFORE theme-overrides.css
+   ================================================ */
+
+/* ================================================
+   DISABLE OLD HERO-PAGE STYLES
+   ================================================ */
+.hero-page,
+.hero-page.hero-bg-image,
+.hero-page::before,
+.hero-page::after,
+.hero-page > *,
+.hero-page h1,
+.hero-page h2,
+.hero-page p,
+.hero-about,
+.hero-services,
+.hero-products,
+.hero-clients,
+.hero-blog,
+.hero-social-analysis,
+.hero-blueway,
+.hero-academy,
+.hero-portfolio,
+.hero-contact,
+.hero-research {
+  /* Reset all old hero-page styles */
+  all: revert !important;
+  /* Ensure no dark overlays */
+  background: none !important;
+  position: static !important;
+}
+
+/* Remove dark overlay from hero-page */
+.hero-page::before {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+
+/* ================================================
+   DISABLE OLD HERO-NOVA STYLES
+   ================================================ */
+.hero-nova,
+.hero-benvinguda,
+.hero-subtitol,
+.hero-subtitol-elegant {
+  /* Reset all old hero-nova styles */
+  all: revert !important;
+  background: none !important;
+}
+
+/* ================================================
+   DISABLE OLD HERO-SECTION STYLES
+   ================================================ */
+.hero-section,
+.hero-section.mentorship-hero,
+.hero-section.success-hero,
+.hero-section.owners-hero,
+.hero-section.entrepreneurs-hero,
+.hero-section.resources-hero,
+.hero-section.financing-hero,
+.hero-section.impact-hero {
+  /* Reset all old hero-section styles */
+  all: revert !important;
+  background: none !important;
+}
+
+.hero-content,
+.hero-text,
+.hero-image,
+.hero-actions,
+.hero-search,
+.hero-visual,
+.hero-stats-large {
+  /* Reset layout styles that conflict */
+  all: revert !important;
+}
+
+/* ================================================
+   DISABLE PROGRAM-SPECIFIC HEROES
+   ================================================ */
+.hero-programa-ferreteries,
+.hero-programa-ferreteries::before,
+.hero-programa-merceries,
+.hero-programa-merceries::before,
+.hero-programa-forns,
+.hero-programa-forns::before {
+  /* Reset all program hero styles */
+  all: revert !important;
+  background: none !important;
+  content: none !important;
+}
+
+/* ================================================
+   DISABLE OTHER HERO VARIANTS
+   ================================================ */
+.hero-gradient,
+.hero-stats,
+.subtitle-hero,
+.logo-hero-gran,
+.hero-cta-group {
+  /* Reset miscellaneous hero styles */
+  all: revert !important;
+}
+
+/* ================================================
+   ENSURE CLEAN SLATE FOR NEW UNIFIED HERO
+   ================================================ */
+section[class*="hero-"] {
+  /* Remove any lingering backgrounds or overlays */
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+section[class*="hero-"]::before,
+section[class*="hero-"]::after {
+  /* Disable pseudo-elements that might add overlays */
+  display: none !important;
+  content: none !important;
+}
+
+/* ================================================
+   FORCE WHITE TEXT TO INHERIT COLOR
+   ================================================ */
+.hero-unified .text-white,
+.hero-unified .text-white-95 {
+  color: inherit !important;
+}
+
+/* ================================================
+   BREADCRUMB COLOR FIXES
+   ================================================ */
+.hero-unified .breadcrumb-item.text-white,
+.hero-unified .breadcrumb-current.text-white,
+.hero-unified .breadcrumb-separator.text-white {
+  color: inherit !important;
+}
+
+/* ================================================
+   IMPORTANT: PRESERVE UNIFIED HERO
+   ================================================ */
+.hero-unified,
+.hero-unified * {
+  /* Ensure unified hero styles are not affected */
+  all: unset;
+  all: revert-layer;
+}

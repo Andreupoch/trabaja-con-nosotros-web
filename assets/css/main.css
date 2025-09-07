@@ -2512,6 +2512,682 @@ svg {
 }
 
 
+/* ============ HERO-OVERRIDES.CSS ============ */
+/* ================================================
+   HERO STYLE OVERRIDES
+   Disables all conflicting hero styles from main.css
+   Must be loaded AFTER main.css but BEFORE theme-overrides.css
+   ================================================ */
+
+/* ================================================
+   DISABLE OLD HERO-PAGE STYLES
+   ================================================ */
+.hero-page,
+.hero-page.hero-bg-image,
+.hero-page::before,
+.hero-page::after,
+.hero-page > *,
+.hero-page h1,
+.hero-page h2,
+.hero-page p,
+.hero-about,
+.hero-services,
+.hero-products,
+.hero-clients,
+.hero-blog,
+.hero-social-analysis,
+.hero-blueway,
+.hero-academy,
+.hero-portfolio,
+.hero-contact,
+.hero-research {
+  /* Reset all old hero-page styles */
+  all: revert !important;
+  /* Ensure no dark overlays */
+  background: none !important;
+  position: static !important;
+}
+
+/* Remove dark overlay from hero-page */
+.hero-page::before {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+}
+
+/* ================================================
+   DISABLE OLD HERO-NOVA STYLES
+   ================================================ */
+.hero-nova,
+.hero-benvinguda,
+.hero-subtitol,
+.hero-subtitol-elegant {
+  /* Reset all old hero-nova styles */
+  all: revert !important;
+  background: none !important;
+}
+
+/* ================================================
+   DISABLE OLD HERO-SECTION STYLES
+   ================================================ */
+.hero-section,
+.hero-section.mentorship-hero,
+.hero-section.success-hero,
+.hero-section.owners-hero,
+.hero-section.entrepreneurs-hero,
+.hero-section.resources-hero,
+.hero-section.financing-hero,
+.hero-section.impact-hero {
+  /* Reset all old hero-section styles */
+  all: revert !important;
+  background: none !important;
+}
+
+.hero-content,
+.hero-text,
+.hero-image,
+.hero-actions,
+.hero-search,
+.hero-visual,
+.hero-stats-large {
+  /* Reset layout styles that conflict */
+  all: revert !important;
+}
+
+/* ================================================
+   DISABLE PROGRAM-SPECIFIC HEROES
+   ================================================ */
+.hero-programa-ferreteries,
+.hero-programa-ferreteries::before,
+.hero-programa-merceries,
+.hero-programa-merceries::before,
+.hero-programa-forns,
+.hero-programa-forns::before {
+  /* Reset all program hero styles */
+  all: revert !important;
+  background: none !important;
+  content: none !important;
+}
+
+/* ================================================
+   DISABLE OTHER HERO VARIANTS
+   ================================================ */
+.hero-gradient,
+.hero-stats,
+.subtitle-hero,
+.logo-hero-gran,
+.hero-cta-group {
+  /* Reset miscellaneous hero styles */
+  all: revert !important;
+}
+
+/* ================================================
+   ENSURE CLEAN SLATE FOR NEW UNIFIED HERO
+   ================================================ */
+section[class*="hero-"] {
+  /* Remove any lingering backgrounds or overlays */
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+section[class*="hero-"]::before,
+section[class*="hero-"]::after {
+  /* Disable pseudo-elements that might add overlays */
+  display: none !important;
+  content: none !important;
+}
+
+/* ================================================
+   FORCE WHITE TEXT TO INHERIT COLOR
+   ================================================ */
+.hero-unified .text-white,
+.hero-unified .text-white-95 {
+  color: inherit !important;
+}
+
+/* ================================================
+   BREADCRUMB COLOR FIXES
+   ================================================ */
+.hero-unified .breadcrumb-item.text-white,
+.hero-unified .breadcrumb-current.text-white,
+.hero-unified .breadcrumb-separator.text-white {
+  color: inherit !important;
+}
+
+/* ================================================
+   IMPORTANT: PRESERVE UNIFIED HERO
+   ================================================ */
+.hero-unified,
+.hero-unified * {
+  /* Ensure unified hero styles are not affected */
+  all: unset;
+  all: revert-layer;
+}
+
+
+/* ============ UNIFIED-CONTENT.CSS ============ */
+/* ================================================
+   UNIFIED CONTENT COMPONENT SYSTEM
+   Consistent styles for all content types with WCAG compliance
+   ================================================ */
+
+/* ================================================
+   1. CONTENT SECTIONS
+   ================================================ */
+.content-section {
+  padding: 4rem 1rem;
+  background: white;
+  position: relative;
+}
+
+.content-section.bg-light {
+  background: #f9fafb;
+}
+
+.content-section.bg-gradient {
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.content-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ================================================
+   2. UNIFIED CARD SYSTEM
+   ================================================ */
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Card Header */
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.card-header .card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.card-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+  color: white;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Card Content */
+.card-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.card-content p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Card Footer */
+.card-footer {
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+/* Card Grid Layout */
+.cards-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.cards-grid.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.cards-grid.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.cards-grid.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ================================================
+   3. UNIFIED FORM STYLES
+   ================================================ */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #1f2937;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Form Buttons */
+.form-button {
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-button-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+  color: white;
+}
+
+.form-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.form-button-secondary {
+  background: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.form-button-secondary:hover {
+  background: #f0f9ff;
+}
+
+/* Form Error States */
+.form-input.error,
+.form-textarea.error,
+.form-select.error {
+  border-color: #ef4444;
+}
+
+.form-error {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* ================================================
+   4. FEATURE LISTS
+   ================================================ */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.feature-item:hover {
+  background: #f3f4f6;
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-title {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.feature-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* ================================================
+   5. INFO BOXES
+   ================================================ */
+.info-box {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+  border-left: 4px solid;
+}
+
+.info-box.info {
+  background: #eff6ff;
+  border-color: #2563eb;
+  color: #1e40af;
+}
+
+.info-box.success {
+  background: #f0fdf4;
+  border-color: #10b981;
+  color: #166534;
+}
+
+.info-box.warning {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #92400e;
+}
+
+.info-box.error {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+.info-box-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ================================================
+   6. TABLES
+   ================================================ */
+.table-container {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.table thead {
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+}
+
+.table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* ================================================
+   7. BUTTONS & LINKS
+   ================================================ */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+  color: white;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.button-secondary {
+  background: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.button-secondary:hover {
+  background: #f0f9ff;
+}
+
+.button-ghost {
+  background: transparent;
+  color: #2563eb;
+  padding: 0.5rem 1rem;
+}
+
+.button-ghost:hover {
+  background: #f0f9ff;
+}
+
+/* Links */
+.link {
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.link:hover {
+  border-bottom-color: #2563eb;
+}
+
+/* ================================================
+   8. RESPONSIVE DESIGN
+   ================================================ */
+@media (max-width: 768px) {
+  .content-section {
+    padding: 3rem 1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .table-container {
+    border-radius: 0;
+  }
+  
+  .form-container {
+    padding: 1.5rem;
+  }
+}
+
+/* ================================================
+   9. ACCESSIBILITY ENHANCEMENTS
+   ================================================ */
+
+/* Focus indicators */
+.button:focus-visible,
+.link:focus-visible,
+.form-input:focus-visible,
+.form-textarea:focus-visible,
+.form-select:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid #1f2937;
+  }
+  
+  .form-input,
+  .form-textarea,
+  .form-select {
+    border-width: 2px;
+  }
+  
+  .button {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  
+  .card:hover,
+  .button:hover {
+    transform: none;
+  }
+}
+
+/* ================================================
+   10. UTILITY CLASSES
+   ================================================ */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+
+.hidden { display: none; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.flex { display: flex; }
+.grid { display: grid; }
+
+.gap-1 { gap: 0.5rem; }
+.gap-2 { gap: 1rem; }
+.gap-3 { gap: 1.5rem; }
+.gap-4 { gap: 2rem; }
+
+
 /* ============ UTILITIES.CSS ============ */
 /* Layout & Spacing Utilities
    ================================================== */
