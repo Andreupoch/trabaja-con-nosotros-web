@@ -9,9 +9,9 @@
 
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1600px; /* Increased from 1280px for wider header */
   margin: 0 auto;
-  padding: 0 var(--space-4);
+  padding: 0 var(--space-6);
 }
 
 .container-sm {
@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-4) 0;
+  padding: var(--space-6) 0; /* More padding for larger header */
   position: relative;
 }
 
@@ -67,19 +67,24 @@
 
 .logo {
   display: flex;
+  flex-direction: column; /* Stack logo and slogan vertically */
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
 }
 
 .logo img {
-  height: 48px;
+  height: 80px; /* Much larger logo */
   width: auto;
+  transition: transform var(--transition-normal);
 }
 
 .logo-slogan {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   color: var(--text-secondary);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-medium);
+  margin-top: var(--space-1);
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* Navigation Links */
@@ -255,6 +260,21 @@
   
   .user-type-selector {
     display: flex;
+  }
+}
+
+/* Logo responsive adjustments */
+@media (max-width: 767px) {
+  .logo img {
+    height: 60px; /* Slightly smaller on mobile */
+  }
+  
+  .logo-slogan {
+    font-size: var(--font-size-sm);
+  }
+  
+  .nav {
+    padding: var(--space-4) 0;
   }
 }
 
